@@ -1,0 +1,93 @@
+name: Publish report issues
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "reports/daily/*.md"
+      - "reports/weekly/*.md"
+      - "reports/products/*.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve changed reports
+        id: changed
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            find reports -mindepth 2 -maxdepth 2 -name '*.md' -type f | sort > /tmp/reports.txt
+          elif [[ "${{ github.event.before }}" =~ ^0+$ ]]; then
+            git diff-tree --no-commit-id --name-only -r "${{ github.sha }}" -- 'reports/**/*.md' > /tmp/reports.txt
+          else
+            git diff --name-only --diff-filter=AM "${{ github.event.before }}" "${{ github.sha }}" -- 'reports/**/*.md' > /tmp/reports.txt
+          fi
+          echo "count=$(wc -l < /tmp/reports.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat /tmp/reports.txt
+
+      - name: Create labels
+        if: steps.changed.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create auto-generated --color 6E7781 --description "由自动化任务生成" --force
+          gh label create daily --color 1D76DB --description "产品与行业雷达日报" --force
+          gh label create weekly --color 5319E7 --description "产品与行业雷达周报" --force
+          gh label create product-research --color D93F0B --description "产品发布深度调研" --force
+
+      - name: Publish or update issues
+        if: steps.changed.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          SERVER_URL: ${{ github.server_url }}
+        shell: bash
+        run: |
+          while IFS= read -r report; do
+            [[ -f "$report" ]] || continue
+            stem="$(basename "$report" .md)"
+            case "$report" in
+              reports/daily/*)
+                issue_title="企业级 Agent 行业雷达日报｜$stem"
+                label="daily"
+                ;;
+              reports/weekly/*)
+                issue_title="企业级 Agent 行业雷达周报｜$stem"
+                label="weekly"
+                ;;
+              reports/products/*)
+                heading="$(sed -n 's/^# //p' "$report" | head -n 1)"
+                issue_title="产品发布调研｜${heading:-$stem}"
+                label="product-research"
+                ;;
+              *) continue ;;
+            esac
+
+            body_file="$(mktemp)"
+            {
+              echo '<!-- product-release-radar:auto-generated -->'
+              cat "$report"
+              echo
+              echo '---'
+              echo "[查看仓库原文]($SERVER_URL/$REPOSITORY/blob/$SHA/$report)"
+            } > "$body_file"
+
+            issue_number="$(gh issue list --repo "$REPOSITORY" --state all --limit 500 --json number,title | jq -r --arg title "$issue_title" '.[] | select(.title == $title) | .number' | head -n 1)"
+            if [[ -n "$issue_number" ]]; then
+              gh issue edit "$issue_number" --repo "$REPOSITORY" --body-file "$body_file" --add-label "$label,auto-generated"
+            else
+              gh issue create --repo "$REPOSITORY" --title "$issue_title" --body-file "$body_file" --label "$label,auto-generated"
+            fi
+            rm -f "$body_file"
+          done < /tmp/reports.txt

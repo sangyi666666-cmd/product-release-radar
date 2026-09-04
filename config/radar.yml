@@ -1,0 +1,38 @@
+version: 1
+timezone: Asia/Shanghai
+
+lanes:
+  - agent_platform
+  - ai_worker
+  - data_agent
+  - work_agent
+  - agentic_coding
+  - ai_platform
+  - ai_infrastructure
+  - capital
+  - enterprise_case
+  - research
+
+source_tiers:
+  P0: official_or_primary
+  P1: community_or_discovery
+  P2: media_or_analysis
+
+scoring:
+  relevance: 25
+  impact: 25
+  evidence_quality: 20
+  novelty: 15
+  actionability: 15
+  thresholds:
+    top_signal: 80
+    important: 60
+    watch: 40
+
+publishing:
+  branch: main
+  canonical_format: markdown
+  issue_mirror: true
+  skip_empty_report: true
+  require_primary_source_for_top_signal: true
+
