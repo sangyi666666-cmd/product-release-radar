@@ -31,7 +31,7 @@ def validate(path: Path) -> list[str]:
 def main() -> None:
     paths = [Path(arg).resolve() for arg in sys.argv[1:]]
     if not paths:
-        paths = sorted(REPORTS.glob("*/*.md"))
+        paths = sorted(path for path in REPORTS.glob("*/*.md") if path.name != "README.md")
     failed = False
     for path in paths:
         if REPORTS not in path.parents or not path.exists():
@@ -49,4 +49,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

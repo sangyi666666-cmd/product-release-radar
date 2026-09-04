@@ -19,7 +19,11 @@ def title(path: Path) -> str:
 
 
 def section(label: str, directory: Path) -> str:
-    files = sorted(directory.glob("*.md"), reverse=True) if directory.exists() else []
+    files = (
+        sorted((path for path in directory.glob("*.md") if path.name != "README.md"), reverse=True)
+        if directory.exists()
+        else []
+    )
     lines = [f"## {label}", ""]
     if not files:
         return "\n".join(lines + ["暂无报告。", ""])
@@ -55,4 +59,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
