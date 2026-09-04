@@ -5,6 +5,7 @@ repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
 python3 scripts/validate_reports.py
+python3 scripts/validate_events.py
 python3 scripts/build_index.py
 
 git add README.md INDEX.md config data research reports scripts templates .github
@@ -24,4 +25,3 @@ else
   echo "尚未配置 origin；已完成本地提交。" >&2
   exit 2
 fi
-

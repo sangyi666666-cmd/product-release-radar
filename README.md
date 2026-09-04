@@ -20,6 +20,8 @@
 3. GitHub Actions 将新增或更新的报告同步为 GitHub Issue，并添加 `daily`、`weekly` 或 `product-research` 标签。
 4. 周报只基于当周日报和结构化事实做聚合分析，不机械拼接日报。
 
+日报同时在 `data/events/YYYY-MM-DD.json` 保存结构化事件。周报优先读取事件数据，避免再次依赖全文抽取，也方便后续建设趋势统计和产品能力时间线。
+
 ## 证据标准
 
 - **P0**：官方公告、官方文档、Release Notes、监管文件、论文原文、官方 GitHub Release。
@@ -36,4 +38,3 @@
 ```
 
 脚本会校验报告、重建索引、提交并推送；GitHub Actions 随后负责创建或更新对应 Issue。若没有文件变化，脚本不会生成空提交。
-
