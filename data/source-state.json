@@ -1,7 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": null,
-  "last_successful_weekly": null,
+  "last_successful_daily": "2026-09-04",
+  "last_successful_weekly": "2026-W36",
   "seen_urls": []
 }
-
