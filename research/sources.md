@@ -2,6 +2,25 @@
 
 本文件记录需要长期固定扫描的外部信源及其使用规则。信源等级和事实核验要求以 `INDUSTRY_RADAR_PLAN.md` 为准。
 
+## GitHub AI 趋势发现
+
+### GitHub Trending
+
+- 地址：https://github.com/trending
+- 等级：P1，趋势发现。
+- 扫描频率：每日。
+- 采集内容：热门仓库、当日新增 Star、语言、仓库简介和项目链接。
+- 使用规则：热度只用于发现线索；进入日报前必须回查仓库 README、Release、文档或维护者公告。
+
+### GitHub Search API
+
+- 接口：https://api.github.com/search/repositories
+- 等级：P1，主题搜索与活跃项目发现。
+- 扫描频率：每日搜索最近 7 天仍有更新的仓库。
+- 主题标签：仅 `llm`、`ai-agent`、`large-language-model`。
+- 处理规则：按仓库去重，排除归档仓库、明显非 AI 项目和纯镜像；Star、Fork 与提交活跃度不得直接写成产品成熟度。
+- 核验规则：重要版本和能力结论回查项目 README、Release、文档或维护者公告。
+
 ## 基础模型与 Agent Infra 官方信源
 
 - OpenAI 模型目录与模型指南：https://developers.openai.com/api/docs/models 与 https://developers.openai.com/api/docs/guides/latest-model

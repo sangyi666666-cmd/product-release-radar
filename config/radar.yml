@@ -19,6 +19,21 @@ source_tiers:
   P1: community_or_discovery
   P2: media_or_analysis
 
+github_discovery:
+  trending:
+    url: https://github.com/trending
+    cadence: daily
+  search_api:
+    url: https://api.github.com/search/repositories
+    active_window_days: 7
+    topics:
+      - llm
+      - ai-agent
+      - large-language-model
+    exclude_archived: true
+    exclude_obvious_non_ai: true
+    deduplicate_by: full_name
+
 scoring:
   relevance: 25
   impact: 25
