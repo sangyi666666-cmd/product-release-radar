@@ -2,8 +2,6 @@
 
 版本：v1.1  
 日期：2026-09-02  
-参考模式：[rollysys/agents-radar](https://github.com/rollysys/agents-radar)
-
 ## 一、目标与使用者
 
 这套雷达不是普通 AI 新闻摘要。它服务于三个决策：
@@ -14,25 +12,7 @@
 
 目标使用者首先是本人，后续可扩展到产品、算法、研发、业务运营和管理层。
 
-## 二、对 agents-radar 模式的借鉴
-
-agents-radar 的可复用机制包括：
-
-- 每日定时运行，支持手动触发；
-- GitHub Issues、PR、Release 与 Trending 并行采集；
-- 使用状态文件记录已经看过的网页，只处理新增或更新内容；
-- 把原始信号交给 LLM 分类、横向比较和提炼趋势；
-- 日报沉淀为 Markdown，并通过 GitHub Issues 等渠道推送；
-- 在日报之外生成周报和月报，观察趋势而非单点新闻。
-
-本方案需要做四项增强：
-
-1. 从“工具热度”升级为“企业产品决策雷达”；
-2. 从单纯外部信源扩展到经授权的内部产品、反馈和运营数据；
-3. 区分事实、分析和建议，并给出证据等级；
-4. 每条重要信号必须形成可复用的“启示”和“建议动作”。
-
-## 三、追踪范围
+## 二、追踪范围
 
 ### A. Agent 开发平台
 
@@ -133,7 +113,7 @@ agents-radar 的可复用机制包括：
 
 融资并购类信息必须区分“宣布、签约、交割、传闻”四种状态；交易金额、估值和参与方应优先回查公司公告、投资机构公告、监管披露或可信数据库。未经确认的消息不得写成已完成交易。
 
-## 四、信源体系
+## 三、信源体系
 
 ### P0：一级信源——每天优先
 
@@ -168,7 +148,7 @@ agents-radar 的可复用机制包括：
 - HR / 财务 DataAgent 问题日志、失败样例、用户反馈和工单；
 - 内部竞品调研、业务方案、培训与运营材料。
 
-## 五、信号卡数据结构
+## 四、信号卡数据结构
 
 每个原始信号标准化为：
 
@@ -190,7 +170,7 @@ recommended_action: 观察 | 深拆 | 试用 | 立项讨论 | 风险检查
 confidence: high | medium | low
 ```
 
-## 六、评分与去噪
+## 五、评分与去噪
 
 ### 产品价值分
 
@@ -223,7 +203,7 @@ confidence: high | medium | low
 - 评测结果优先使用官方系统卡与可复现实验，并明确厂商自评和第三方评测的差异。
 - 对 Agent 的影响至少落到 Builder、Runtime、Tool、Context、Evaluation、Governance、成本或产品入口中的一个具体对象。
 
-## 七、生产流程
+## 六、生产流程
 
 采用“并行采集 + 串行核验和研判”的混合编排：
 
@@ -255,7 +235,7 @@ DataAgent 采集 ─┤
 - 从信号到产品实验/方案的转化数；
 - 每条有效洞察的时间和模型成本。
 
-## 八、输出模板
+## 七、输出模板
 
 ### 每日雷达
 
@@ -294,7 +274,7 @@ DataAgent 采集 ─┤
 - 当前能力差距与路线图建议；
 - 一个月内被证实或被证伪的判断。
 
-## 九、存储结构
+## 八、存储结构
 
 ```text
 reports/
@@ -313,7 +293,7 @@ state/
 
 日报保留事实快照；周报观察趋势；`hypotheses.yml` 保存“我们认为会发生什么”和后续证据，避免永远只做事后总结。
 
-## 十、实施路线
+## 九、实施路线
 
 ### Phase 0：已完成
 
@@ -341,7 +321,7 @@ state/
 - 自动关联外部信号与内部路线图、需求和评测；
 - 从“信息雷达”升级为“产品决策和机会发现 Agent”。
 
-## 十一、首批核心 Watchlist
+## 十、首批核心 Watchlist
 
 ### Agent 平台
 
@@ -364,7 +344,7 @@ Workday Sana / ASOR、SAP Joule / AI Agent Hub、Oracle Fusion Agentic Applicati
 
 Databricks Genie Agents、Snowflake Cortex Agents / Analyst、Google Conversational Analytics、Microsoft Fabric Data Agent、ThoughtSpot Spotter、Tableau、WrenAI、Vanna、DB-GPT、Dataherald。
 
-## 十二、评估方案
+## 十一、评估方案
 
 前两周由 PM 逐期评审，标注：
 
