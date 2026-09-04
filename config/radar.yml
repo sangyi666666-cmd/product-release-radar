@@ -7,6 +7,7 @@ lanes:
   - data_agent
   - work_agent
   - agentic_coding
+  - foundation_model
   - ai_platform
   - ai_infrastructure
   - capital
@@ -29,10 +30,19 @@ scoring:
     important: 60
     watch: 40
 
+agent_infra_model_release:
+  dimensions:
+    - tool_and_async_calling
+    - context_memory_and_long_tasks
+    - coding_browsing_and_computer_use
+    - latency_throughput_and_cost
+    - deployment_access_security_and_governance
+  top_signal_candidate_when_dimensions_changed: 2
+  require_official_release_source: true
+
 publishing:
   branch: main
   canonical_format: markdown
   issue_mirror: true
   skip_empty_report: true
   require_primary_source_for_top_signal: true
-

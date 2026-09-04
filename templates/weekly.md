@@ -10,6 +10,8 @@
 
 ## 各赛道趋势
 
+其中单列基础模型对 Agent Builder、Runtime、Tool、Context、Evaluation、Governance 与成本的影响。
+
 ## 代表产品能力对比
 
 ## 开源版本与共性 Issue
@@ -29,4 +31,3 @@
 ## 本周主要来源
 
 ## 周报质量记录
-

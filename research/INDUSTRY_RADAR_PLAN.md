@@ -106,7 +106,23 @@ agents-radar 的可复用机制包括：
 
 重点对象：豆包工作、Qoder 全系列、Claude Cowork、Kimi Work；扩展观察 Manus、Genspark、扣子、OpenAI Codex、Cursor、Devin、GitHub Copilot Coding Agent、Google Jules 等相邻产品。
 
-### F. AI 产业与资本动态
+### F. 基础模型与 Agent Infra
+
+基础模型不是独立于 Agent 平台的普通模型新闻，而是决定 Agent 能力上限、运行成本和安全边界的基础设施。重点跟踪：
+
+- Tool Use、函数调用、MCP、异步工具调用、多 Agent 编排和中途指令调整；
+- 上下文窗口、记忆、长任务、状态保持、推理强度和最大输出；
+- Coding、Browsing、Computer Use、文档与专业软件操作能力；
+- 延迟、吞吐、Token 效率、缓存、批处理、定价和任务单位成本；
+- API、Chat、Codex/IDE、云平台等入口的开放范围、地区、配额和灰度节奏；
+- 安全等级、权限边界、监控、数据驻留、合规和企业治理限制；
+- 模型升级对 Agent Builder、Runtime、Evaluation、Observability 与产品交互范式的影响。
+
+重大模型发布若在上述至少两个维度形成实质变化，并有官方模型页、系统卡、发布公告或 API 文档支撑，应作为 Top Signal 候选进入日报评分。只公布单项 Benchmark、缺少可用性信息或与 Agent 工作流无明显关系的模型更新，不因厂商声量自动进入首页。
+
+重点对象包括 OpenAI GPT/Codex 模型、Anthropic Claude、Google Gemini、DeepSeek、阿里通义、字节豆包、腾讯混元、Moonshot/Kimi、智谱 GLM，以及对企业 Agent Runtime 有直接影响的开源模型。
+
+### G. AI 产业与资本动态
 
 重点跟踪对 Agent、AI Worker 和 DataAgent 产品判断有外溢影响的产业信号：
 
@@ -160,7 +176,7 @@ agents-radar 的可复用机制包括：
 id: source + url + published_at
 published_at: 原始发布时间
 collected_at: 采集时间
-lane: agent_platform | ai_worker | data_agent | work_agent | agentic_coding | ai_platform | ai_infrastructure | capital | enterprise_case | research
+lane: agent_platform | ai_worker | data_agent | work_agent | agentic_coding | foundation_model | ai_platform | ai_infrastructure | capital | enterprise_case | research
 source_tier: P0 | P1 | P2 | internal
 entity: 产品、项目或公司
 signal_type: release | feature | pricing | case | issue | research | standard | funding | acquisition | strategic_investment
@@ -199,6 +215,13 @@ confidence: high | medium | low
 - 同一功能的 Preview、GA 和补丁视为同一演进链；
 - GitHub Issue 只有在互动显著、影响生产、代表共性需求时进入日报；
 - 没有新增事实时不重复推送，只更新“持续观察”。
+
+### 基础模型进入首页的判断
+
+- 模型名称或 Benchmark 刷新本身不等于高价值信号；必须说明它改变了哪一层 Agent Infra。
+- 发布与可用性分开记录：正式发布、定向企业访问、分批灰度、API 可调用和本地/私有部署不得混写。
+- 评测结果优先使用官方系统卡与可复现实验，并明确厂商自评和第三方评测的差异。
+- 对 Agent 的影响至少落到 Builder、Runtime、Tool、Context、Evaluation、Governance、成本或产品入口中的一个具体对象。
 
 ## 七、生产流程
 

@@ -1,6 +1,6 @@
 # AI Product Release Radar
 
-持续追踪 Agent 开发平台、AI Worker、DataAgent、通用工作 Agent、Agentic Coding、模型平台、AI 基础设施与产业生态的产品发布和重大更新。
+持续追踪 Agent 开发平台、AI Worker、DataAgent、通用工作 Agent、Agentic Coding、基础模型与 Agent Infra、模型平台、AI 基础设施及产业生态的产品发布和重大更新。
 
 本仓库以公开的一手材料为主要证据，区分可验证事实、厂商口径、产品判断与待验证事项。日报记录高价值增量，周报提炼趋势，产品报告对重要发布做深度拆解。
 

@@ -2,6 +2,16 @@
 
 本文件记录需要长期固定扫描的外部信源及其使用规则。信源等级和事实核验要求以 `INDUSTRY_RADAR_PLAN.md` 为准。
 
+## 基础模型与 Agent Infra 官方信源
+
+- OpenAI 模型目录与模型指南：https://developers.openai.com/api/docs/models 与 https://developers.openai.com/api/docs/guides/latest-model
+- Anthropic 官方 News、模型文档与 Release Notes：https://www.anthropic.com/news 与 https://docs.anthropic.com/
+- Google Gemini 模型与 API 文档：https://ai.google.dev/gemini-api/docs/models
+- 其他厂商：固定扫描官方产品页、模型卡、系统卡、API 文档、定价页和正式发布公告。
+- 等级：P0。
+- 扫描重点：工具调用、异步执行、上下文与长任务、Coding/Browser/Computer Use、成本与缓存、API 和产品开放范围、安全与治理。
+- 核验规则：发布、可用、灰度、地区和套餐分别记录；“即将开放”不得写成“当前所有用户可用”。
+
 ## Unite.AI
 
 - 中文站：https://www.unite.ai/zh-cn/
