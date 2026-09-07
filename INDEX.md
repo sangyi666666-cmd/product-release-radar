@@ -19,7 +19,7 @@
 
 ## 产品发布深度调研
 
-- [Grok Bot 产品分析与团队启示](./reports/products/2026-09-04-GrokBot产品分析与团队启示.md)
+- [Grok Bot 产品深度调研](./reports/products/2026-09-07-GrokBot产品深度调研.md)
 - [阿里云“万有无界”产品发布调研](./reports/products/2026-09-02-阿里云万有无界产品发布调研.md)
 - [腾讯云 WorkBuddy 开放平台产品发布调研](./reports/products/2026-09-02-腾讯云WorkBuddy开放平台产品发布调研.md)
 
