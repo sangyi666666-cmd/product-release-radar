@@ -1,0 +1,25 @@
+[
+  {
+    "id": "github-trending-hermes-agent-2026-09-07",
+    "published_at": "2026-09-07T10:36:00+08:00",
+    "collected_at": "2026-09-07T10:36:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P1",
+    "entity": "Hermes Agent",
+    "signal_type": "issue",
+    "title": "Hermes Agent 持续进入 GitHub Trending，但无窗口内正式版本",
+    "facts": [
+      "2026-09-07 的 GitHub Trending 页面出现 NousResearch/hermes-agent。",
+      "该项目的公开 Release 页面显示最新正式版本为 v2026.8.31（Hermes Agent v0.21.0），早于本日报观察窗口。"
+    ],
+    "source_urls": [
+      "https://github.com/trending?since=daily",
+      "https://github.com/NousResearch/hermes-agent/releases"
+    ],
+    "analysis": "Trending 只能说明社区注意力，未形成版本、能力或企业采用的新增证据。",
+    "insight": "开源项目入选竞品池前，应将热度与版本节奏、运行时可靠性、安全边界、评测和部署责任分开核验。",
+    "recommended_action": "观察",
+    "confidence": "medium",
+    "score": 42
+  }
+]
