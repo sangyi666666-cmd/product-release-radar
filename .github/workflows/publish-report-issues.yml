@@ -25,6 +25,7 @@ jobs:
         id: changed
         shell: bash
         run: |
+          git config core.quotePath false
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             find reports -mindepth 2 -maxdepth 2 -name '*.md' -type f | sort > /tmp/reports.txt
           elif [[ "${{ github.event.before }}" =~ ^0+$ ]]; then
@@ -55,7 +56,10 @@ jobs:
         shell: bash
         run: |
           while IFS= read -r report; do
-            [[ -f "$report" ]] || continue
+            if [[ ! -f "$report" ]]; then
+              echo "::error file=$report::Resolved report path does not exist"
+              exit 1
+            fi
             [[ "$(basename "$report")" == "README.md" ]] && continue
             stem="$(basename "$report" .md)"
             case "$report" in
