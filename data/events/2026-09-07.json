@@ -1,5 +1,29 @@
 [
   {
+    "id": "openai-gpt-6-astra-2026-09-03",
+    "published_at": "2026-09-03T00:00:00+00:00",
+    "collected_at": "2026-09-07T10:36:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "OpenAI GPT-6 Astra",
+    "signal_type": "release",
+    "title": "GPT-6 Astra：面向复杂端到端任务的旗舰模型",
+    "facts": [
+      "OpenAI 官方 API 文档将 gpt-6-astra 列为默认旗舰模型，用于复杂推理、编码、Computer Use、研究和文档创建。",
+      "模型上下文窗口为 1,050,000 Token，最大输出为 128,000 Token；文本价格为每百万输入 Token 10 美元、输出 Token 50 美元。",
+      "模型支持 Web Search、File Search、Code Interpreter、Hosted Shell、Apply Patch、Skills、Computer Use、MCP 与 Tool Search；模型指南列出异步工具调用、中途指令调整、推理强度动态调整和失配监控。"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "https://developers.openai.com/api/docs/guides/latest-model"
+    ],
+    "analysis": "该发布同时影响 Agent 的工具接口、异步运行、长上下文、执行入口、成本策略和安全监控，属于 Agent Infra 顶级信号。",
+    "insight": "企业需要把模型、工具、推理策略、成本与安全告警记录为版本化运行合同，并分别管理公告、限量开放和全量可用状态。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 95
+  },
+  {
     "id": "github-trending-hermes-agent-2026-09-07",
     "published_at": "2026-09-07T10:36:00+08:00",
     "collected_at": "2026-09-07T10:36:00+08:00",
