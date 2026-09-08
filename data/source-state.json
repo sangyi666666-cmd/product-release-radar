@@ -1,6 +1,15 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-09-07",
+  "last_successful_daily": "2026-09-08",
   "last_successful_weekly": "2026-W36",
-  "seen_urls": []
+  "seen_urls": [],
+  "confirmed_sources": {
+    "2026-09-08": [
+      "https://github.github.com/gh-aw/blog/2026-09-07-weekly-update/",
+      "https://github.com/github/gh-aw/releases/tag/v0.88.4",
+      "https://github.github.com/gh-aw/blog/2026-09-05-cloud-hypervisor-consolidation/",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+      "https://github.com/trending?since=daily"
+    ]
+  }
 }

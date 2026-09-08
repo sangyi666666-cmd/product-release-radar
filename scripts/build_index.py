@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import re
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,11 +20,20 @@ def title(path: Path) -> str:
 
 
 def section(label: str, directory: Path) -> str:
-    files = (
-        sorted((path for path in directory.glob("*.md") if path.name != "README.md"), reverse=True)
-        if directory.exists()
-        else []
-    )
+    files = sorted((path for path in directory.glob("*.md") if path.name != "README.md"), reverse=True) if directory.exists() else []
+    # Product reports are often drafted alongside a radar run.  Only index files
+    # already in Git so a daily publication cannot expose an unrelated draft.
+    if directory.name == "products":
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files", "-z", "--", str(directory.relative_to(ROOT))],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.split("\0")
+        )
+        files = [path for path in files if path.relative_to(ROOT).as_posix() in tracked]
     lines = [f"## {label}", ""]
     if not files:
         return "\n".join(lines + ["暂无报告。", ""])

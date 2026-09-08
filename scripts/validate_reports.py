@@ -8,6 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports"
+CANONICAL_REPORT_DIRECTORIES = ("daily", "weekly", "products")
 DATE_NAME = re.compile(r"^\d{4}-\d{2}-\d{2}\.md$")
 WEEK_NAME = re.compile(r"^\d{4}-W\d{2}\.md$")
 
@@ -31,7 +32,12 @@ def validate(path: Path) -> list[str]:
 def main() -> None:
     paths = [Path(arg).resolve() for arg in sys.argv[1:]]
     if not paths:
-        paths = sorted(path for path in REPORTS.glob("*/*.md") if path.name != "README.md")
+        paths = sorted(
+            path
+            for directory in CANONICAL_REPORT_DIRECTORIES
+            for path in (REPORTS / directory).glob("*.md")
+            if path.name != "README.md"
+        )
     failed = False
     for path in paths:
         if REPORTS not in path.parents or not path.exists():
