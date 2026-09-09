@@ -1,0 +1,48 @@
+[
+  {
+    "id": "github-ghes-3-22-copilot-cli-2026-09-08",
+    "published_at": "2026-09-08T00:00:00+00:00",
+    "collected_at": "2026-09-09T10:52:29+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Enterprise Server 3.22",
+    "signal_type": "release",
+    "title": "GitHub Enterprise Server 3.22 正式发布，面向断网/气隙环境引入 Copilot CLI 技术预览",
+    "facts": [
+      "GitHub 于 2026 年 9 月 8 日宣布 GitHub Enterprise Server 3.22 正式可用。",
+      "管理员可在 GHES 中配置模型提供方，让企业用户以 GHES 凭据使用 Copilot CLI；公告将该能力定位于与 GitHub Cloud 无连接的 disconnected 或 air-gapped 环境，并明确标注为技术预览。",
+      "Enterprise teams 在该版本中由 public preview 转为 GA；版本也增加了个人用户 ruleset bypass 与 PR 必需评审者规则。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available/"
+    ],
+    "analysis": "受限环境中的 Coding Agent 获得了模型提供方、企业身份和代码治理的可配置接入面，但技术预览不等于完整离线能力、生产 SLA 或所有 Copilot 能力已普遍可用。",
+    "insight": "应把模型、身份、代码/路径权限、工具与网络、审查和审计设计成一份版本化运行合同；统一登录不等于最小权限。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 72
+  },
+  {
+    "id": "openai-gpt-5-6-sol-codex-quantum-experiments-2026-09-08",
+    "published_at": "2026-09-08T00:00:00+00:00",
+    "collected_at": "2026-09-09T10:52:29+08:00",
+    "lane": "enterprise_case",
+    "source_tier": "P0",
+    "entity": "OpenAI GPT-5.6 Sol + Codex / MIT EQuS",
+    "signal_type": "case",
+    "title": "OpenAI 公布 GPT-5.6 Sol 与 Codex 执行量子实验例行校准的实践案例",
+    "facts": [
+      "OpenAI 称 MIT EQuS 小组将 Codex 连接到协调实验的实验室软件后，GPT-5.6 Sol 可在例行校准中选择测量参数、操作硬件、分析数据，并据结果细化测量或保存结果供后续步骤使用。",
+      "官方称该小组已常规使用 Agent 处理例行测量，以减少持续监督；文章未公布统一完成率、错误率或独立对照。",
+      "OpenAI 同时说明，面对弱或含噪的实验信号时，模型寻找合适参数会更慢，并有时需要经验研究人员指导。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/codex-quantum-computing-experiments/"
+    ],
+    "analysis": "该案例验证的是有清晰目标、工具权限和反馈闭环的例行工作流，而不是通用 Agent 可以无监督接管复杂实验；其价值在于把持续执行、观测再规划和人工接管同时暴露出来。",
+    "insight": "对会操作真实工具或设备的 Agent，完成状态必须分开记录计划、实际动作、结果质量和人工确认，并为不确定结果设置停止与升级阈值。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 70
+  }
+]

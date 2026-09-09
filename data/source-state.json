@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-09-08",
+  "last_successful_daily": "2026-09-09",
   "last_successful_weekly": "2026-W36",
   "seen_urls": [],
   "confirmed_sources": {
@@ -10,6 +10,14 @@
       "https://github.github.com/gh-aw/blog/2026-09-05-cloud-hypervisor-consolidation/",
       "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
       "https://github.com/trending?since=daily"
+    ],
+    "2026-09-09": [
+      "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available/",
+      "https://openai.com/index/codex-quantum-computing-experiments/",
+      "https://help.openai.com/en/articles/6825453",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%2Bpushed%3A%3E2026-09-02%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
     ]
   }
 }
