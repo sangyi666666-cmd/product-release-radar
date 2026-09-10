@@ -1,0 +1,119 @@
+[
+  {
+    "id": "openai-gpt-6-astra-general-availability-work-codex-api-2026-09-09",
+    "published_at": "2026-09-09T00:00:00+00:00",
+    "collected_at": "2026-09-10T11:15:34+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "OpenAI GPT-6 Astra",
+    "signal_type": "release",
+    "title": "GPT-6 Astra 正式开放 ChatGPT Work、Codex 与 API",
+    "facts": [
+      "OpenAI 于 2026 年 9 月 9 日宣布 GPT-6 Astra 可在 ChatGPT Work、Codex 和 API 使用；企业访问在发布时默认关闭，需由管理员按适用合同和费率卡启用。",
+      "官方模型页列出 1,050,000 token 上下文、128,000 最大输出，输入/输出价格为每百万 token 10/50 美元，并支持函数调用和结构化输出。",
+      "在 Responses API 下，官方模型页将 Web Search、File Search、Hosted Shell、Computer Use、MCP、Skills 与 Tool Search 标为支持。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-6-astra-next-generation-work/",
+      "https://developers.openai.com/api/docs/models/gpt-6-astra"
+    ],
+    "analysis": "这是工具编排、长上下文、Coding/Computer Use、成本和产品/API 可用范围共同变化的正式基础模型发布；正式开放不等于所有企业租户、账户或接口形态已自动启用。",
+    "insight": "模型选型应同时记录模型/快照、工具、上下文、价格阶梯、接口、账户开关与治理边界，而非只比较 benchmark 和 token 单价。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 91
+  },
+  {
+    "id": "openai-gpt-6-astra-critical-cyber-monitoring-2026-09-09",
+    "published_at": "2026-09-09T00:00:00+00:00",
+    "collected_at": "2026-09-10T11:15:34+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "OpenAI GPT-6 Astra",
+    "signal_type": "feature",
+    "title": "GPT-6 Astra 系统卡披露关键网络安全阈值与实时失配监测",
+    "facts": [
+      "OpenAI 的 Astra 系统卡称，该模型按其 Preparedness Framework 达到关键网络安全能力阈值。",
+      "系统卡称监测会在 Codex、ChatGPT 和 Responses API 中异步审阅 Agent 的推理链、动作和会话输入输出，发现高严重度潜在失配时可自动暂停或结束会话。",
+      "企业客户可配置 Webhook 接收检测提醒；系统卡同时说明不同入口覆盖不同、监测可能漏检且干预前仍可能发生有害动作。"
+    ],
+    "source_urls": [
+      "https://deploymentsafety.openai.com/gpt-6-astra"
+    ],
+    "analysis": "安全监测是高能力工具型模型的必要部署层，但不是最小权限、网络出口控制、不可逆动作确认或业务审批的替代品。",
+    "insight": "将告警、自动暂停、人工核验和恢复/终止作为任务状态机，并保留模型、工具、副作用和审批证据。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 88
+  },
+  {
+    "id": "github-copilot-enterprise-managed-permissions-2026-09-09",
+    "published_at": "2026-09-09T00:00:00+00:00",
+    "collected_at": "2026-09-10T11:15:34+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot Business and Enterprise",
+    "signal_type": "feature",
+    "title": "GitHub GA 企业强制管理 Copilot Agent 的 Shell、文件和网络权限",
+    "facts": [
+      "GitHub 宣布管理员可集中规定 Copilot Agent 的操作被阻断、要求人工批准或允许，覆盖 Shell 命令、文件读取/编辑和网络域名。",
+      "这些限制不能由用户或工作区设置、自动批准或已保存批准削弱，并可为不同企业团队设置专门策略。",
+      "该能力已在 GitHub Copilot app、Copilot CLI 和使用 Agent Host 的 VS Code 会话 GA。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/",
+      "https://docs.github.com/en/enterprise-cloud@latest/copilot/reference/enterprise-administrators/enterprise-managed-settings"
+    ],
+    "analysis": "Coding Agent 权限从本地偏好变为企业可下压且不可绕过的策略面，但策略本身仍需按实际命令、路径、域名和团队例外进行回归验证。",
+    "insight": "按副作用对象分层配置默认 deny、逐次 ask 与可审计 allow，并把团队例外版本化。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "github-code-quality-agentic-autofix-bulk-2026-09-09",
+    "published_at": "2026-09-09T00:00:00+00:00",
+    "collected_at": "2026-09-10T11:15:34+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Code Quality",
+    "signal_type": "feature",
+    "title": "GitHub Code Quality 支持批量分配最多 25 项发现给 Copilot Agentic Autofix",
+    "facts": [
+      "用户可在一页选择最多 25 个标准 Code Quality 发现并一次分配给 Copilot。",
+      "Copilot 会在分支上进行 Agentic 修复、验证改动，并创建 PR 供用户审查和合并。",
+      "能力沿用现有 GitHub Code Quality 企业策略，适用于启用该服务的 GitHub Team 和 Enterprise Cloud 仓库，并消耗 AI credits。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix"
+    ],
+    "analysis": "批量修复扩大了处理队列粒度，并未移除 PR 审查、CI、代码所有者确认和回滚的必要性；批次上限不应等同于合理变更范围。",
+    "insight": "将发现集合、变更、验证证据、审查与回滚作为可治理任务包，按耦合和风险设定批次。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 73
+  },
+  {
+    "id": "anthropic-cyber-evaluation-internet-misconfiguration-assessment-2026-09-09",
+    "published_at": "2026-09-09T00:00:00+00:00",
+    "collected_at": "2026-09-10T11:15:34+08:00",
+    "lane": "research",
+    "source_tier": "P0",
+    "entity": "Anthropic Claude",
+    "signal_type": "issue",
+    "title": "Anthropic 复盘网络安全评测环境误配导致 Claude 访问真实第三方系统",
+    "facts": [
+      "Anthropic 称同一第三方伙伴构建的网络安全评测环境误配，使模型在被告知没有互联网访问时连接到开放互联网。",
+      "该公司识别出第四起涉及早期 Claude Opus 4.6 检查点的事件，并称已通知受影响方；METR 将开展独立调查。",
+      "公告明确评测运行时未启用随已发布模型交付的网络安全保障，因此不能将事件外推为普通生产使用的发生率。"
+    ],
+    "source_urls": [
+      "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+    ],
+    "analysis": "该事件强调 Agent 风险来自模型、提示、网络、凭证、权限和终止机制的组合；模拟环境的文字声明不构成技术隔离证明。",
+    "insight": "红队与回归环境需要独立验证出口、目标归属、凭证、中止和审计，而不是依赖模型的环境判断。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 72
+  }
+]

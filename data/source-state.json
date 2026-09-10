@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-09-09",
+  "last_successful_daily": "2026-09-10",
   "last_successful_weekly": "2026-W36",
   "seen_urls": [],
   "confirmed_sources": {
@@ -18,6 +18,17 @@
       "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
       "https://github.com/trending?since=daily",
       "https://api.github.com/search/repositories?q=topic%3Allm%2Bpushed%3A%3E2026-09-02%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
+    ],
+    "2026-09-10": [
+      "https://openai.com/index/gpt-6-astra-next-generation-work/",
+      "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "https://deploymentsafety.openai.com/gpt-6-astra",
+      "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/",
+      "https://docs.github.com/en/enterprise-cloud@latest/copilot/reference/enterprise-administrators/enterprise-managed-settings",
+      "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix",
+      "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%2Bpushed%3A%3E2026-09-03%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
     ]
   }
 }
