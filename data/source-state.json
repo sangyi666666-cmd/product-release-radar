@@ -29,6 +29,18 @@
       "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
       "https://github.com/trending?since=daily",
       "https://api.github.com/search/repositories?q=topic%3Allm%2Bpushed%3A%3E2026-09-03%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
+    ],
+    "2026-09-11": [
+      "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview",
+      "https://docs.github.com/en/code-security/code-scanning/managing-your-code-scanning-configuration/ai-scan-security-detections",
+      "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
+      "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+      "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64",
+      "https://github.com/github/codeql-action/releases",
+      "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode",
+      "https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%2Bpushed%3A%3E2026-09-04%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
     ]
   }
 }

@@ -1,0 +1,123 @@
+[
+  {
+    "id": "github-ai-scan-pull-request-api-preview-2026-09-10",
+    "published_at": "2026-09-10T20:20:58+00:00",
+    "collected_at": "2026-09-11T11:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Advanced Security AI Scan",
+    "signal_type": "feature",
+    "title": "GitHub 为 AI Scan for pull requests 提供组织与仓库 REST API 预览",
+    "facts": [
+      "GitHub 在 2026 年 9 月 10 日将 AI Scan for pull requests 的启用状态管理开放为组织级和仓库级 REST API 公共预览。",
+      "组织设置决定组织范围内是否允许 PR 扫描，仓库设置可为选定仓库打开或关闭扫描；组织级关闭时，仓库设置不能覆盖。",
+      "接口为 /orgs/{org}/code-scanning/ai-scan 与 /repos/{owner}/{repo}/code-scanning/ai-scan，公共预览仅适用于 github.com 的 GitHub Advanced Security 客户，不支持 GitHub Enterprise Server。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview",
+      "https://docs.github.com/en/code-security/code-scanning/managing-your-code-scanning-configuration/ai-scan-security-detections"
+    ],
+    "analysis": "AI 代码安全扫描从逐仓库 UI 配置进入可编程治理面，便于按仓库风险和组织策略批量 rollout；公共预览和仅云端可用限制了其当前企业覆盖。",
+    "insight": "Agentic Coding 的安全门禁应纳入仓库生命周期编排，记录组织策略、仓库例外、扫描结果、PR 状态和回滚路径，而不是只在 Agent 运行后人工查看。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 81
+  },
+  {
+    "id": "github-mai-code-1-flash-deprecation-2026-09-10",
+    "published_at": "2026-09-10T16:54:01+00:00",
+    "collected_at": "2026-09-11T11:30:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot MAI-Code-1-Flash",
+    "signal_type": "issue",
+    "title": "GitHub Copilot 全面退役 MAI-Code-1-Flash 并建议迁移 1.1 版本",
+    "facts": [
+      "GitHub 于 2026 年 9 月 10 日在所有 Copilot 体验中退役 MAI-Code-1-Flash，范围包括 Copilot Chat、内联编辑、ask/agent 模式和代码补全。",
+      "官方建议替代模型为 MAI-Code-1.1-Flash；Copilot Enterprise 管理员可能需要在模型策略中显式启用替代模型。",
+      "已退役模型不需要用户手动移除，但管理员应检查模型可用性和策略，更新工作流与集成。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
+      "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
+    ],
+    "analysis": "模型退役直接改变 Coding Agent 的路由和可复现性，企业若只记录产品名称而不锁定模型与替代策略，回归结果可能在无代码变更时发生漂移。",
+    "insight": "模型生命周期合同至少要包含退役日期、替代模型、租户策略、快照/别名、能力差异和回归集；Agent 供应商的默认迁移不等于业务等价。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 76
+  },
+  {
+    "id": "github-codeql-2-27-linux-arm64-2026-09-09",
+    "published_at": "2026-09-09T21:45:06+00:00",
+    "collected_at": "2026-09-11T11:30:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "GitHub CodeQL 2.27.0",
+    "signal_type": "release",
+    "title": "CodeQL 2.27.0 支持 Linux ARM64 并扩展 Agent 代码安全覆盖",
+    "facts": [
+      "CodeQL 2.27.0 新增 Linux ARM64 原生运行支持，并提供对应 CLI 与 bundle 发布资产。",
+      "版本新增 Rust 命令注入查询，扩展 Java/Kotlin 的 Micronaut 建模、C# 与 ASP.NET Core 分析，并改进多语言准确性。",
+      "GitHub 说明该版本会自动部署到 github.com 的代码扫描；旧版 GHES 可手动升级，未来 GHES 版本将包含该能力。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64",
+      "https://github.com/github/codeql-action/releases"
+    ],
+    "analysis": "CodeQL 的 ARM64 与语言覆盖扩展降低了异构构建环境的扫描摩擦，并增强 Agent 生成代码进入 PR 后的自动安全反馈；它仍是静态分析信号，不等于运行时行为安全。",
+    "insight": "Coding Agent 验收应把生成代码的静态扫描、依赖恢复、架构兼容和 PR 阻断规则作为同一流水线，分别记录扫描覆盖和未分析原因。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 71
+  },
+  {
+    "id": "github-actions-cache-mode-ga-2026-09-10",
+    "published_at": "2026-09-10T17:26:59+00:00",
+    "collected_at": "2026-09-11T11:30:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "GitHub Actions cache-mode",
+    "signal_type": "feature",
+    "title": "GitHub Actions 以 cache-mode GA 控制工作流缓存最小权限",
+    "facts": [
+      "GitHub Actions 现已在所有计划正式支持 workflow/job 级 cache-mode，可选择 read、write、write-only 或 none。",
+      "Job 级设置覆盖 workflow 级设置，权限会沿 reusable workflow 传递且被调用工作流不能获得超过调用方授予的缓存权限。",
+      "对低信任事件如 pull_request_target，显式授予 write 或 write-only 会触发缓存投毒风险警告；未声明时继续使用现有安全默认值。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode",
+      "https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows"
+    ],
+    "analysis": "缓存权限被细化为可继承的执行策略后，Agent 生成的 workflow 可以按信任边界限制恢复/写入副作用；配置错误仍可能把供应链风险引入低信任 PR。",
+    "insight": "把缓存、依赖、Secrets、网络和构建产物视为 Agent 执行环境的不同副作用面，分别设定默认 deny/ask/allow 并纳入审计。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 68
+  },
+  {
+    "id": "github-ai-scan-and-codeql-agentic-coding-control-loop-2026-09-10",
+    "published_at": "2026-09-10T20:20:58+00:00",
+    "collected_at": "2026-09-11T11:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Agentic Coding security workflow",
+    "signal_type": "feature",
+    "title": "GitHub 将 Agent 生成改动接入 API 化扫描与 ARM64 安全流水线",
+    "facts": [
+      "AI Scan for pull requests 的组织/仓库 API、CodeQL 2.27.0 的扫描能力和 GitHub Actions cache-mode 在同一窗口内相继发布。",
+      "这些能力分别覆盖扫描启停的治理入口、分析引擎的架构/语言覆盖和执行流水线缓存权限；其中 AI Scan 仍为公共预览。",
+      "官方材料没有披露三者已形成统一 Agent 编排产品或端到端缺陷拦截率，因此只能确认能力拼接的可行性，不能写成完整闭环已 GA。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview",
+      "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64",
+      "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode"
+    ],
+    "analysis": "这是一条由多个同日 P0 能力组成的产品组合判断，而非单独的新发布；它说明 Agentic Coding 的竞争面正在从生成质量延伸到扫描治理与执行环境控制。",
+    "insight": "评估 Coding Agent 时应测量从任务委派、分支变更、静态扫描、缓存/网络权限到 PR 审查的完整链路，并区分每一层的失败责任。",
+    "recommended_action": "深拆",
+    "confidence": "medium",
+    "score": 70
+  }
+]
