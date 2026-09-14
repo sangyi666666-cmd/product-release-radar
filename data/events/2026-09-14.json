@@ -1,0 +1,74 @@
+[
+  {
+    "id": "github-copilot-code-review-shell-tools-ensemble-2026-09-11",
+    "published_at": "2026-09-11T00:00:00-07:00",
+    "collected_at": "2026-09-14T10:45:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot code review",
+    "signal_type": "feature",
+    "title": "Copilot code review 以受控 Shell 工具与多 Agent 集合强化 Lite 审查",
+    "facts": [
+      "GitHub 于 2026 年 9 月 11 日宣布，Copilot code review 会在后续提交解决相应问题时自动关闭已解决评论，并在采纳建议时生成与改动相关的 commit message。",
+      "审查 Agent 现在在 Copilot agent firewall 后使用 Copilot SDK 的完整 Shell 工具集，可运行构建、测试、定向脚本并读取可用工具和 API 信息。",
+      "Lite effort level 从单一 Agent 改为多 Agent 集合后再合并审查；GitHub 报告其内部实验中各严重度评论的平均处理量上升、审查成本约下降 8%，未将其表述为通用缺陷检出率。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review"
+    ],
+    "analysis": "审查 Agent 正从文本 diff 判断走向在受控环境中验证的任务；更大的工具面也使命令、网络、凭证、资源预算和审计成为产品验收的一部分。",
+    "insight": "自动关闭评论只表示 Agent 判断后续提交覆盖了问题；审查产物应保留模型建议、实际执行命令、输出、可访问边界、CI 和人类合并决定。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "github-vscode-agents-copilot-usage-metrics-2026-09-11",
+    "published_at": "2026-09-11T00:00:00-07:00",
+    "collected_at": "2026-09-14T10:45:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot usage metrics",
+    "signal_type": "feature",
+    "title": "GitHub 将 VS Code 专用 Agents 窗口的采用与会话指标加入 Copilot Usage Metrics",
+    "facts": [
+      "GitHub 于 2026 年 9 月 11 日将 VS Code Agents 窗口指标加入 Copilot usage metrics 的企业和组织 1 日、28 日聚合报表及用户级报表。",
+      "聚合报表包含可选的 daily_active_vscode_agent_users 和 totals_by_vscode_agent；用户级报表包含可选的 used_vscode_agent 与对应会话/用户消息累计。",
+      "指标仅覆盖专用 VS Code Agents 窗口，与 editor-window Agent Mode 和通用 usage rollup 分开；数据不可用时可选字段保持缺失或 null。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
+      "https://docs.github.com/en/rest/copilot/copilot-usage"
+    ],
+    "analysis": "入口拆分的使用数据补齐了采用观测，但 session、消息量和活跃用户仍不能证明任务成功、代码质量或业务收益。",
+    "insight": "将 Agent 运营分为采用、过程和结果三层，并按入口、模型、权限策略、仓库风险和任务类型切片；null 应被作为数据可用性状态处理。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 74
+  },
+  {
+    "id": "aws-agent-registry-namespace-migration-risk-2026-09-14",
+    "published_at": "2026-09-14T00:00:00+08:00",
+    "collected_at": "2026-09-14T10:45:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "AWS Agent Registry",
+    "signal_type": "issue",
+    "title": "AWS Agent Registry 旧 bedrock-agentcore 命名空间将在 9 月 17 日停止支持",
+    "facts": [
+      "AWS Agent Registry 官方文档当前提示，新 agent-registry 命名空间已启动迁移，早期公开预览的 bedrock-agentcore 命名空间将在 2026 年 9 月 17 日停止支持。",
+      "官方文档说明 Registry 可记录 Agent、MCP、Skill 和自定义资产，并支持草稿、提交、待审批、批准/拒绝及新修订版本的记录生命周期。",
+      "Registry 的入站发现可配置 IAM 或 JWT 授权；页面未将命名空间迁移提示标为本窗口的功能 GA，也未提供精确产品发布日期。"
+    ],
+    "source_urls": [
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-prerequisites.html",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-record-lifecycle.html",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-supported-auth-types.html"
+    ],
+    "analysis": "这是 namespace、IAM、SDK、IaC、审批流和 MCP 客户端可能失配的近期迁移风险，不应表述为新功能正式发布。",
+    "insight": "Agent 资产控制面兼容性需要版本化管理；除资产迁移外，还应验证新入口下的授权发现、调用、审批、拒绝访问和审计连续性。",
+    "recommended_action": "风险检查",
+    "confidence": "medium",
+    "score": 67
+  }
+]

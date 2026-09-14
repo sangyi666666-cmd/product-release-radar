@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-09-10",
-  "last_successful_weekly": "2026-W36",
+  "last_successful_daily": "2026-09-14",
+  "last_successful_weekly": "2026-W37",
   "seen_urls": [],
   "confirmed_sources": {
     "2026-09-08": [
@@ -41,6 +41,16 @@
       "https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows",
       "https://github.com/trending?since=daily",
       "https://api.github.com/search/repositories?q=topic%3Allm%2Bpushed%3A%3E2026-09-04%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
+    ],
+    "2026-09-14": [
+      "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review",
+      "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
+      "https://docs.github.com/en/rest/copilot/copilot-usage",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-prerequisites.html",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-record-lifecycle.html",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-supported-auth-types.html",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-09-07%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
     ]
   }
 }

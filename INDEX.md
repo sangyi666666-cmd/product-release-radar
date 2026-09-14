@@ -6,6 +6,7 @@
 
 ## 日报
 
+- [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-09-14.md)
 - [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-09-11.md)
 - [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-09-10.md)
 - [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-09-09.md)
@@ -19,6 +20,7 @@
 
 ## 周报
 
+- [企业级 Agent / AI Worker / DataAgent 周度趋势总结](./reports/weekly/2026-W37.md)
 - [企业级 Agent / AI Worker / DataAgent 周度趋势总结](./reports/weekly/2026-W36.md)
 
 ## 产品发布深度调研
