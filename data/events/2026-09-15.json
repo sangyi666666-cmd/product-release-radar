@@ -1,0 +1,48 @@
+[
+  {
+    "id": "github-copilot-auto-model-selection-tiers-2026-09-14",
+    "published_at": "2026-09-14T00:00:00-07:00",
+    "collected_at": "2026-09-15T11:10:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot Auto model selection",
+    "signal_type": "feature",
+    "title": "GitHub Copilot Auto 新增效率、平衡、智能三档模型路由偏好",
+    "facts": [
+      "GitHub 于 2026 年 9 月 14 日宣布，Copilot Auto model selection 提供效率、平衡、智能三档，分别优先低成本、平衡成本/质量/响应时间和复杂任务质量。",
+      "三个档位使用同一可用模型集合，Auto 仍按每个 prompt 选择模型；即使选择智能档，简单任务也可能使用较小模型。",
+      "该功能正在向 Visual Studio Code、Copilot CLI 与 GitHub Copilot app 滚动；用量按 Auto 实际选中的模型计费，付费订阅用户通过 Auto 计费继续有 10% 折扣。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/"
+    ],
+    "analysis": "这将模型选择从固定配置转为任务级优化偏好，但档位不是确定模型、确定性能或全入口普遍可用的承诺。",
+    "insight": "模型路由需同时记录策略档位、实际模型或快照、工具权限、成本、时延、质量和任务验收，才能识别成本优化与质量漂移的真实来源。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "openai-perplexity-astra-end-to-end-systems-case-2026-09-14",
+    "published_at": "2026-09-14T00:00:00-07:00",
+    "collected_at": "2026-09-15T11:10:00+08:00",
+    "lane": "enterprise_case",
+    "source_tier": "P0",
+    "entity": "Perplexity / GPT-6 Astra",
+    "signal_type": "case",
+    "title": "OpenAI 发布 Perplexity 使用 GPT-6 Astra 做端到端测试与生产监测的案例",
+    "facts": [
+      "OpenAI 于 2026 年 9 月 14 日发布客户案例，称 Perplexity 使用 GPT-6 Astra 编写沟通内容、修改软件并监测生产系统。",
+      "案例描述 GPT-6 Astra 可围绕应用生成小型测试程序，模拟语言模型 API 或 connector 等外部服务响应，以检查端到端行为。",
+      "Perplexity 高管称相较早期模型，团队可更少查看端到端系统；案例未公开完成率、事故率、成本、样本或独立对照。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/perplexity-improving-accuracy-with-astra/"
+    ],
+    "analysis": "这是一条可用于提炼测试证据和人工接管设计的客户实践，而不是对无监督生产修改或普遍 ROI 的独立证明。",
+    "insight": "对有外部副作用的 Agent，应把变更、隔离测试、依赖模拟、生产观测与人工批准拆为可回放状态，并保存未覆盖范围和回滚位置。",
+    "recommended_action": "试用",
+    "confidence": "medium",
+    "score": 68
+  }
+]
