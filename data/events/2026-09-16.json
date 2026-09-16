@@ -1,0 +1,96 @@
+[
+  {
+    "id": "openai-agents-api-public-beta-2026-09-10",
+    "published_at": "2026-09-10T00:00:00-07:00",
+    "collected_at": "2026-09-16T11:03:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "OpenAI Agents API",
+    "signal_type": "release",
+    "title": "OpenAI Agents API 以公共 Beta 开放受管 Codex harness",
+    "facts": [
+      "OpenAI 于 2026 年 9 月 10 日宣布 Agents API 进入公共 Beta，并称所有开发者可用；使用不另收平台费，按所用 token 与工具付费。",
+      "Agents API 可创建由 OpenAI 运行和维护 harness 的 session，并支持 OpenAI 托管 sandbox、自托管环境或合作方环境。",
+      "官方列出命令/代码执行、skills/instructions、工具或 MCP 外部数据连接、工作中引导、上下文压缩、子任务拆分与 session 恢复等受管 harness 能力。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-the-agents-api/",
+      "https://developers.openai.com/api/docs/guides/agents-api/overview"
+    ],
+    "analysis": "该发布将长任务、工具编排、上下文管理、子任务协调和环境运行的 harness 层产品化，但公共 Beta 不等同于 SLA、全地区/账户一致可用或应用治理责任被托管。",
+    "insight": "受管 harness 与应用控制面应分开验收；后者仍须拥有身份、数据边界、工具授权、审批、幂等、审计、预算、业务完成条件和回滚。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 89
+  },
+  {
+    "id": "openai-chatgpt-work-data-agent-2026-09-10",
+    "published_at": "2026-09-10T00:00:00-07:00",
+    "collected_at": "2026-09-16T11:03:00+08:00",
+    "lane": "data_agent",
+    "source_tier": "P0",
+    "entity": "ChatGPT Work Data agent",
+    "signal_type": "release",
+    "title": "OpenAI 发布 ChatGPT Work Data agent",
+    "facts": [
+      "OpenAI 于 2026 年 9 月 10 日发布 ChatGPT Work 的 Data agent，可连接获批准的数据源、文件和文档，并利用组织业务术语、指标定义、计算和数据关系进行分析。",
+      "公告列出 Redshift、Datadog、BigQuery、ClickHouse、Databricks、MongoDB、Snowflake、Google Drive 与 SharePoint 等连接；管理员选择可用连接和角色，查询执行连接账户既有的表、行、列权限。",
+      "Data agent 可生成可编辑、分享和刷新的仪表盘；管理员可通过 ChatGPT Work Plugins 目录安装/开放 Data 及相关数据源插件，外部行动需用户批准。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/put-data-to-work/"
+    ],
+    "analysis": "该发布把语义上下文、证据审阅、交互式产物和获批行动组合为 DataAgent 工作流入口，但未披露各连接器的地区、套餐、语义覆盖或结论准确率。",
+    "insight": "每个数据任务应关联身份、连接、语义层/指标版本、查询证据、字段裁剪、结果校验、产物版本、实际行动和批准人。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 86
+  },
+  {
+    "id": "openai-gpt-live-1-api-2026-09-10",
+    "published_at": "2026-09-10T00:00:00-07:00",
+    "collected_at": "2026-09-16T11:03:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "OpenAI GPT-Live-1",
+    "signal_type": "release",
+    "title": "OpenAI 在 API 提供 GPT-Live-1 全双工语音模型",
+    "facts": [
+      "OpenAI 于 2026 年 9 月 10 日宣布 GPT-Live-1 在 API 可用，前端语音层定价为每分钟 0.05 美元。",
+      "官方称 GPT-Live-1 可同时听和说，处理打断、背景噪声和静默，并可将推理与工具调用委派给后端文本模型。",
+      "发布页列出电话部署为目标场景；自定义语音需要联系销售确认资格和申请流程。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+    ],
+    "analysis": "该更新让实时语音与后端 Agent 可分层组合，但交互自然度和后端高风险动作的授权度必须分别治理。",
+    "insight": "语音 Agent 应独立记录身份确认、意图复述、工具权限、操作前确认、执行回执和转人工；不能用单一通话成功率掩盖高风险失败。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 78
+  },
+  {
+    "id": "github-copilot-custom-property-suggestions-2026-09-15",
+    "published_at": "2026-09-15T00:00:00-07:00",
+    "collected_at": "2026-09-16T11:03:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "feature",
+    "title": "GitHub Copilot 预览仓库自定义属性允许值建议",
+    "facts": [
+      "GitHub 于 2026 年 9 月 15 日发布 Copilot custom property allowed-value suggestions，目前为 Copilot Business 和 Copilot Enterprise 的 public preview。",
+      "组织或企业管理员新建仓库自定义属性定义时，Copilot 可按属性名称建议允许值；企业和组织 owner 可通过策略控制可用性。",
+      "GitHub 文档说明，仓库 custom properties 是用于组织、治理与自动化的结构化元数据，并可用于定位 rulesets。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions/",
+      "https://docs.github.com/en/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization"
+    ],
+    "analysis": "该预览降低治理元数据 schema 的冷启动成本，但建议不是合规判断或安全事实，且预览状态需先核验可用范围与审计记录。",
+    "insight": "治理字段应由责任人维护枚举词典、强制性、例外审批和规则后果；AI 候选值须保留采纳/改写记录和人工复核。",
+    "recommended_action": "观察",
+    "confidence": "high",
+    "score": 72
+  }
+]
