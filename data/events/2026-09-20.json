@@ -1,0 +1,120 @@
+[
+  {
+    "id": "github-copilot-code-review-overview-auto-resolution-ga-2026-09-18",
+    "published_at": "2026-09-18T13:17:22-07:00",
+    "collected_at": "2026-09-20T11:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot code review",
+    "signal_type": "feature",
+    "title": "Copilot code review GA 提供持续进度、智能自动解决与批量提交说明",
+    "facts": [
+      "GitHub 于 2026 年 9 月 18 日宣布 Copilot code review 的改进已正式可用（generally available）。",
+      "新的 overview comment 会按 Open、Resolved since last review、Previously missed 分组，保留审查进度、严重度和对应行评论；后续审查可根据新提交更智能地自动解决评论，并尊重要求保留问题的回复。",
+      "采纳一批符合条件的 Copilot review 建议时，系统会生成相关的 commit 标题和可选说明；批次也可以包含非 Copilot 评论。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience"
+    ],
+    "analysis": "代码审查 Agent 从一次性 diff 评论转向可持续更新的状态记录与变更提交辅助，但自动解决仍是 Agent 对后续提交的判断，不是人类确认或缺陷已消失的证明。",
+    "insight": "Coding Agent 的审查产物应保留每轮发现、状态转移、解决理由、用户回复、实际变更和合并决定；overview 的闭环体验不能替代可回放证据。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 86
+  },
+  {
+    "id": "github-actions-workflow-execution-protections-ga-2026-09-17",
+    "published_at": "2026-09-17T14:47:27-07:00",
+    "collected_at": "2026-09-20T11:30:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "GitHub Actions workflow execution protections",
+    "signal_type": "release",
+    "title": "GitHub Actions 工作流执行保护 GA，默认收紧公共仓库 pull_request_target",
+    "facts": [
+      "GitHub 于 2026 年 9 月 17 日宣布 workflow execution protections 从 public preview 正式 GA，适用于 Enterprise、组织和仓库。",
+      "GA 新增按具体 workflow 文件定向、Insights 审计规则影响和 REST API 管理能力；evaluate mode 可先以影子模式观察将被阻断的运行。",
+      "GitHub 为尚无适用事件策略的公共仓库引入限制 pull_request_target 的默认规则，先以 evaluate mode 运行，并计划于 2026 年 11 月 2 日对符合条件且仍使用默认策略的仓库自动执行。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available",
+      "https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions"
+    ],
+    "analysis": "这为 Agent 生成或修改 workflow 提供了可编程的执行边界和迁移观察期，重点变化在副作用控制而不是模型能力；默认规则的后续强制执行可能直接改变公共项目的 CI 行为。",
+    "insight": "Agent 执行策略应把 actor、事件、workflow 文件、Secrets、网络和部署目标联合建模，并先用 evaluate/Insights 建立误阻断清单，再切换强制模式。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 88
+  },
+  {
+    "id": "github-copilot-model-deprecation-october-2026",
+    "published_at": "2026-09-18T12:00:00-07:00",
+    "collected_at": "2026-09-20T11:30:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot model lifecycle",
+    "signal_type": "issue",
+    "title": "GitHub Copilot 公告 10 月 19 日退役六个模型并给出替代路由",
+    "facts": [
+      "GitHub 于 2026 年 9 月 18 日公告，Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5 六个模型将于 2026 年 10 月 19 日在 Copilot Chat、内联编辑、ask/agent 模式和代码补全等体验退役。",
+      "公告给出的建议替代分别为 Gemini 3.8 Flash、GPT-5.6 Sol、GPT-5.6 Sol、GPT-5.6 Luna、GPT-5.6 Luna 和 Grok 4.6；替代模型在默认启用策略下会自动为 Business/Enterprise 客户启用，管理员关闭全局默认或模型策略时不会自动出现。",
+      "这是未来退役通知，不表示替代模型当前在所有账户、地区或入口均已可用；GitHub 说明无需手动移除退役模型，但要求在截止日前更新工作流与集成。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october",
+      "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
+    ],
+    "analysis": "模型生命周期事件会在没有代码变更的情况下改变 Coding Agent 的路由、成本、时延与结果分布；建议替代不是行为等价证明，也没有承诺所有组织策略会自动迁移。",
+    "insight": "企业应把退役日期、替代模型、实际快照/别名、入口和租户策略、回归集与预算影响写入模型供应合同，并在截止日前完成双路回归。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 84
+  },
+  {
+    "id": "github-copilot-cli-customization-metrics-2026-09-17",
+    "published_at": "2026-09-17T14:08:50-07:00",
+    "collected_at": "2026-09-20T11:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot CLI usage metrics",
+    "signal_type": "feature",
+    "title": "Copilot CLI 使用指标 API 纳入 skills、custom agents、MCP、slash commands 与 plugins",
+    "facts": [
+      "GitHub 于 2026 年 9 月 17 日扩展 Copilot CLI 报表，企业/组织的每用户与聚合 1 日报表、每用户 28 日报表及聚合 28 日 day_totals 可提供 Agentic CLI 定制项指标。",
+      "新增 totals_by_skill、totals_by_custom_agent、totals_by_mcp、totals_by_slash_cmd、totals_by_plugin 以及对应 distinct_*_use_count 字段，用于观察前五高频项和使用种类数量。",
+      "客户自定义名称为保护隐私会归入 other/custom；MCP 的 interaction_count 统计连接或重连尝试，成功与失败均计入，不等于工具调用成功。字段在数据不可用时可为空或缺失。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api",
+      "https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics"
+    ],
+    "analysis": "CLI Agent 的可观测范围从用户活跃扩展到技能、MCP 和插件的采用结构，便于运营发现启用缺口；指标仍是过程/采用信号，不能单独证明任务成功、质量或业务收益。",
+    "insight": "Agent 运营应分别看采用、连接/调用过程和任务结果；对 MCP 至少区分连接尝试、工具调用、错误和最终验收，不能把 interaction_count 当成有效执行数。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 78
+  },
+  {
+    "id": "npm-stage-only-tokens-2026-09-18",
+    "published_at": "2026-09-18T09:37:50-07:00",
+    "collected_at": "2026-09-20T11:30:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "npm stage-only granular access tokens",
+    "signal_type": "feature",
+    "title": "npm stage-only token 将 Agent 自动发布改为人工批准后发布",
+    "facts": [
+      "GitHub 于 2026 年 9 月 18 日宣布 npm granular access token 新增 Read and write (stage only) 权限；自动化工作流可用 npm stage publish 提交待审核版本，但该 token 不能直接执行 npm publish。",
+      "包维护者需启用 2FA 后审核并批准 staged 版本；stage-only token 仍可移动 dist-tags 和弃用版本，不能被视为无风险凭证。",
+      "发布为可选迁移路径，不改变现有 token 的直接发布能力；npm 计划在 2027 年 1 月移除通过 bypass-2FA token 直接发布的能力，要求 npm CLI 11.15.0+ 与 Node.js 22.14.0+。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation"
+    ],
+    "analysis": "它把 Agent/CI 的包发布从单步写入变为可审阅的两阶段副作用，降低被盗凭证直接发布恶意版本的影响面，但维护者批准和 dist-tag 权限仍需治理。",
+    "insight": "对 Agent 生成的软件产物，优先采用 stage、验证、人工批准、发布四态流水线，并将 token 权限、包范围、审批人和可撤销动作写入审计记录。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 75
+  }
+]
