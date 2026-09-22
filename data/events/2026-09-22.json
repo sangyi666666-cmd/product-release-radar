@@ -1,0 +1,71 @@
+[
+  {
+    "id": "github-copilot-grok-4-7-gradual-rollout-2026-09-21",
+    "published_at": "2026-09-21T00:00:00-07:00",
+    "collected_at": "2026-09-22T11:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot / Grok 4.7",
+    "signal_type": "release",
+    "title": "Grok 4.7 在 GitHub Copilot 分批推出，组织策略决定实际可见性",
+    "facts": [
+      "GitHub 于 2026 年 9 月 21 日宣布，xAI 的 Grok 4.7 正在 GitHub Copilot 中逐步推出，按 provider list pricing 纳入 usage-based billing。",
+      "公告列出 Copilot Pro、Pro+、Max、Business 和 Enterprise，以及 VS Code、Visual Studio、Copilot CLI、cloud agent、Copilot app、JetBrains、Xcode 和 Eclipse 等目标入口。",
+      "GitHub 明确 rollout 为 gradual；Business/Enterprise 管理员可用 model policy 管理访问，默认新模型启用策略下会自动启用，关闭全局默认或显式禁用模型时不会自动出现。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/"
+    ],
+    "analysis": "这是 Copilot 分发层的模型目录和路由变化，不是所有组织或入口已经迁移的通知；官方公告没有证明各入口在工具权限、上下文、时延、质量、地区或模型快照上相同。",
+    "insight": "模型资产应同时记录供应商/别名、入口、租户策略、实际调用快照、计费规则和任务权限；否则分批开放或策略调整会在没有代码变更时改变 Agent 的结果、成本和治理边界。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 83
+  },
+  {
+    "id": "github-enterprise-credential-inventory-exports-2026-09-21",
+    "published_at": "2026-09-21T00:00:00-07:00",
+    "collected_at": "2026-09-22T11:30:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "GitHub Enterprise Cloud credential inventory",
+    "signal_type": "feature",
+    "title": "GitHub Enterprise Cloud 新增凭证库存导出，为 Agent 工具身份建立盘点入口",
+    "facts": [
+      "GitHub 于 2026 年 9 月 21 日宣布，Enterprise Cloud 可导出企业内可访问资源的 SSH key、classic/fine-grained PAT、OAuth App access token、GitHub App user-to-server token 和 installation token 库存。",
+      "拥有 View enterprise credentials 细粒度权限的 enterprise owner 与成员可导出 CSV 或通过新的分页 REST API 获取库存，并按用户、App、凭证类型和组织过滤。",
+      "库存元数据包含 owner、scope/permission、创建与过期时间、最后使用时间及目标组织或仓库；能力现已适用于 Enterprise Cloud，GitHub Enterprise Server 将在后续版本支持。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports/"
+    ],
+    "analysis": "这不是 Agent 专属授权能力，也不自动识别业务意图；但它为使用 GitHub、CI、MCP 或自建自动化的 Agent 提供了可列举的工具身份风险面。",
+    "insight": "凭证库存需与业务任务 owner、运行时主体、具体 scope 和工具/环境调用关联，才能完成最小权限、轮换、应急撤销和影响范围判断。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "anthropic-accenture-embedded-evaluation-2026-09-18",
+    "published_at": "2026-09-18T00:00:00-07:00",
+    "collected_at": "2026-09-22T11:30:00+08:00",
+    "lane": "research",
+    "source_tier": "P0",
+    "entity": "Anthropic / Accenture",
+    "signal_type": "research",
+    "title": "Anthropic 与 Accenture 启动嵌入式独立评估合作",
+    "facts": [
+      "Anthropic 于 2026 年 9 月 18 日宣布与 Accenture 的 Faculty 合作，范围包括 frontier model 评估与 red teaming、alignment assessment 和 safeguards 测试。",
+      "Anthropic 称 embedded evaluator 将获得接近员工的访问级别，以观察训练中的模型、构建和部署决策，并可报告事件和向公众提供风险与收益信息。",
+      "双方预计未来五年至少各投入 10 亿美元建设相关能力；Anthropic 明确具体运营、访问和公开报告标准尚未形成，并由 Anthropic 直接出资且合作为非排他性。"
+    ],
+    "source_urls": [
+      "https://www.anthropic.com/news/accenture-embedded-evaluation"
+    ],
+    "analysis": "这是将独立评测延伸至模型开发和部署过程的治理探索，不是第三方认证或模型安全性的证明；直接资金、访问和报告机制的独立性仍待实践检验。",
+    "insight": "高风险 Agent 不能只依靠上线前 benchmark；需保留权限、工具调用、人工接管、异常处置和回滚的过程证据，并由与交付 KPI 分离的角色复核。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 80
+  }
+]

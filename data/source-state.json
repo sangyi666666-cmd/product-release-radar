@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-09-20",
+  "last_successful_daily": "2026-09-22",
   "last_successful_weekly": "2026-W37",
   "seen_urls": [],
   "confirmed_sources": {
@@ -89,6 +89,16 @@
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-09-13%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-09-13%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30",
       "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-09-13%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
+    ],
+    "2026-09-22": [
+      "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/",
+      "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports/",
+      "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%2Bpushed%3A%3E2026-09-15%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%2Bpushed%3A%3E2026-09-15%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%2Bpushed%3A%3E2026-09-15%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
     ]
   }
 }
