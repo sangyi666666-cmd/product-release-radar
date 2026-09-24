@@ -1,0 +1,97 @@
+[
+  {
+    "id": "github-copilot-app-local-sandboxing-2026-09-23",
+    "published_at": "2026-09-23T00:00:00-07:00",
+    "collected_at": "2026-09-24T09:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot app",
+    "signal_type": "feature",
+    "title": "GitHub Copilot app 发布本地 sandbox 预览",
+    "facts": [
+      "GitHub 于 2026 年 9 月 23 日发布 Copilot app local sandboxing，状态为 public preview，且默认关闭。",
+      "该功能按项目为本地仓库与 working-tree session 配置文件系统读写/只读/拒绝目录、外网与本地网络、Git HTTPS 与 GitHub CLI 凭证策略。",
+      "enterprise-managed settings 可进一步收紧有效策略；操作系统无法实施请求策略时 sandboxed shell 会报错而不在无 sandbox 状态下运行。",
+      "功能只适用于新的或重启后的本地 session，不适用于 cloud sandbox、remote host，也不与 Copilot CLI 的 sandbox 设置共用。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app/"
+    ],
+    "analysis": "该预览将 Agent 的最小权限从工具允许/拒绝进一步落到文件、网络和凭证边界，但默认关闭与入口范围限制意味着不能将其视为所有 Coding Agent 的统一安全控制。",
+    "insight": "将仓库目录、网络目的地、身份/凭证、命令与外部副作用组合为可测试策略合同，并验证策略无法强制时的 fail-closed 行为。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 85
+  },
+  {
+    "id": "github-copilot-app-opentelemetry-2026-09-22",
+    "published_at": "2026-09-22T00:00:00-07:00",
+    "collected_at": "2026-09-24T09:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot app",
+    "signal_type": "feature",
+    "title": "GitHub Copilot app 支持企业配置 OpenTelemetry 导出",
+    "facts": [
+      "GitHub 于 2026 年 9 月 22 日宣布 Copilot app 支持通过 enterprise-managed settings 配置 OpenTelemetry。",
+      "管理员可在 managed-settings.json 的 telemetry 属性中设置导出与 endpoint，让组织兼容的监控工具接收 Agent 活动数据。",
+      "官方列举的观测用途包括查看模型请求和工具使用、逐步调查 Agent 执行，以及集中应用监控设置。",
+      "提示和响应内容默认不导出；官方要求启用前检查 content-capture 设置。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app/",
+      "https://docs.github.com/en/copilot/concepts/agents/agent-monitoring"
+    ],
+    "analysis": "桌面 Coding Agent 可接入企业既有 tracing 管线，但是否获得充分复盘证据与是否过度采集敏感内容仍取决于组织的 telemetry 和 content-capture 配置。",
+    "insight": "以任务、模型/effort、工具/权限、测试、人工决定和结果构成最小事件链；提示和代码内容另按数据分级、脱敏、保留期与访问角色治理。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 83
+  },
+  {
+    "id": "github-copilot-code-review-configuration-2026-09-23",
+    "published_at": "2026-09-23T00:00:00-07:00",
+    "collected_at": "2026-09-24T09:30:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot code review",
+    "signal_type": "feature",
+    "title": "GitHub Copilot code review 将个人配置与企业默认 effort 设为 GA",
+    "facts": [
+      "GitHub 于 2026 年 9 月 23 日宣布 Copilot code review 的个人设置页和 enterprise-wide default review effort 均为 generally available。",
+      "个人设置页覆盖所有 Copilot plans，包括 Business 和 Enterprise，可配置自动 review、对新 push 与 draft PR 的自动 review、以及 Lite 或 Balanced 默认 effort。",
+      "获授权的 enterprise administrator 可为 organization-owned repositories 设置 Lite、Balanced 或 GitHub default；组织与仓库可以覆盖继承值。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews"
+    ],
+    "analysis": "代码审查触发与 effort 已成为可分层治理的正式配置面，但 GA 不代表每个仓库自动启用、审查质量一致或可替代测试、扫描与人工合并责任。",
+    "insight": "把触发事件、effort、仓库风险、覆盖关系、测试/扫描门禁、评论关闭和人工合并共同纳入策略视图，避免默认值和例外造成不可见漂移。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 78
+  },
+  {
+    "id": "anthropic-claude-novel-enzyme-system-2026-09-23",
+    "published_at": "2026-09-23T00:00:00-07:00",
+    "collected_at": "2026-09-24T09:30:00+08:00",
+    "lane": "research",
+    "source_tier": "P0",
+    "entity": "Anthropic Claude",
+    "signal_type": "research",
+    "title": "Anthropic 披露 Claude 在生命科学研究中发现新酶系统候选",
+    "facts": [
+      "Anthropic 于 2026 年 9 月 23 日介绍其在 2026 年春成立的生命科学研究组和实验室，使用 Claude 探索 DNA 数据、生成假设并在实验室测试。",
+      "公司称 Claude 在科学家仅给出高层方向的情况下，发现了一个与 DNA repeats 相关、特征类似 CRISPR 的新酶系统。",
+      "官方明确该系统的功能尚未知，并将该工作描述为 agents 与人类在每个环节协作的早期研究。"
+    ],
+    "source_urls": [
+      "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    ],
+    "analysis": "这是模型生成科学候选并进入外部实验验证的厂商早期研究案例，不提供完整对照、失败率或独立复现，不能外推为通用科研自治或企业 ROI。",
+    "insight": "高风险专业 Worker 的产物应包含候选假设、证据、反例、验证计划、验证结果、不确定性和签字责任人，而非只交付自然语言结论。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 72
+  }
+]

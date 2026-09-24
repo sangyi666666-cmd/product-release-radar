@@ -1,0 +1,55 @@
+[
+  {
+    "id": "openai-gpt-6-sol-luna-api-and-copilot-2026-09-22",
+    "published_at": "2026-09-22T00:00:00-07:00",
+    "collected_at": "2026-09-23T11:40:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "OpenAI GPT-6 Sol / GPT-6 Luna",
+    "signal_type": "release",
+    "title": "OpenAI 正式发布 GPT-6 Sol 与 GPT-6 Luna，GitHub Copilot 分批接入",
+    "facts": [
+      "OpenAI API Changelog 于 2026 年 9 月 22 日记录发布 GPT-6 Sol（gpt-6-sol）和 GPT-6 Luna（gpt-6-luna），可通过 Responses API 与 Chat Completions API 使用，并接受文本与图像输入、生成文本输出。",
+      "OpenAI 模型目录列出 Sol 和 Luna 均支持 functions、web search、file search、computer use，具有 1.05M context 和 128K 最大输出；Sol/Luna 的标准短上下文输入/缓存输入/输出价格分别为每百万 token 2/0.20/10 美元与 0.10/0.01/0.50 美元。",
+      "OpenAI 文档说明 Sol 和 Luna 支持 none 至 max reasoning effort；使用 reasoning with tools 时推荐 Responses API，二者在 Chat Completions 的 function calling 仅支持 reasoning_effort: none；EU 数据驻留仅适用于 Standard processing。",
+      "GitHub 于同日公告 Copilot 对 Sol 和 Luna 采用 gradual rollout：Sol 面向 Pro+、Max、Business、Enterprise，Luna 还面向 Pro；Business/Enterprise 可由 model policy 管理，新模型是否自动启用取决于默认策略和显式禁用设置。"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/changelog",
+      "https://developers.openai.com/api/docs/models",
+      "https://developers.openai.com/api/docs/guides/latest-model",
+      "https://developers.openai.com/api/docs/pricing",
+      "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/"
+    ],
+    "analysis": "该发布同时改变 Agent 的工具/Computer Use 入口、长上下文、复杂任务与高吞吐任务的性能成本分层、API/产品可用范围和驻留边界；官方规格不等同于具体业务的成功率、端到端时延或实际总成本。",
+    "insight": "模型选择应成为可审计路由合同，记录精确模型、入口、reasoning effort、上下文、工具权限、服务层、区域、成本、降级链和人工验收；API 发布与 Copilot 分批可见性不得混写。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 92
+  },
+  {
+    "id": "anthropic-claude-opus-5-5-and-copilot-2026-09-22",
+    "published_at": "2026-09-22T00:00:00-07:00",
+    "collected_at": "2026-09-23T11:40:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "Anthropic Claude Opus 5.5",
+    "signal_type": "release",
+    "title": "Anthropic 发布 Claude Opus 5.5 并跨云提供，GitHub Copilot 分批接入",
+    "facts": [
+      "Anthropic 于 2026 年 9 月 22 日发布 Claude Opus 5.5（claude-opus-5-5），并称其已在 Claude Platform、AWS、Google Cloud 和 Microsoft Azure 可用。",
+      "官方公布每百万 token 输入/输出/cache read/cache write 价格为 4/20/0.20/5 美元；Fast mode 的输入/输出为 8/40 美元。",
+      "Anthropic 表示 Opus 5.5 可零数据保留，带有用于 EU AI Act 合规的水印措施，且不再提供关闭 thinking mode 的方式；关于成本、速度、基准和安全效果的具体比较均为厂商披露。",
+      "GitHub 同日公告 Opus 5.5 对 Copilot Pro+、Max、Business、Enterprise 分批推出；Business/Enterprise 管理员可通过 model policy 管理访问，默认启用策略下新模型才会自动启用。"
+    ],
+    "source_urls": [
+      "https://www.anthropic.com/claude-opus-5-5",
+      "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/"
+    ],
+    "analysis": "该事件将长任务/代码/知识工作能力、成本与模型侧安全控制同时推入多云和开发者工具入口，但模型侧拦截、水印或数据保留选项不等于业务动作已被正确授权或任务结果已验收。",
+    "insight": "长时 Agent 必须同时拥有运行层可回放记录与业务层的委托、权限、检查点、人工确认和回滚责任；供应商安全能力按数据类别、地区、入口和实际开关逐项验收。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 90
+  }
+]
