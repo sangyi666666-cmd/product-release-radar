@@ -93,5 +93,52 @@
     "recommended_action": "深拆",
     "confidence": "high",
     "score": 72
+  },
+  {
+    "id": "google-gemini-enterprise-shared-agent-ownership-transfer-2026-09-21",
+    "published_at": "2026-09-21T00:00:00-07:00",
+    "collected_at": "2026-09-24T09:55:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "Google Gemini Enterprise",
+    "signal_type": "feature",
+    "title": "Gemini Enterprise 支持管理员移交共享 Agent 所有权",
+    "facts": [
+      "Google Cloud 在 2026 年 9 月 21 日的 Gemini Enterprise Release Notes 中发布 shared employee-made agents 的所有权移交能力。",
+      "具备 Gemini Enterprise Admin role 的管理员可将已共享的 Agent 转交给另一用户或自己；私有 Agent 不支持移交。",
+      "每个 Agent 同时只有一个 owner；移交后新用户成为唯一 owner，原 owner 被保留为具有 agentUser 角色的 permissioned user。",
+      "若 Agent 有 schedule 或 event trigger，移交会将其标记为 disabled，须由新 owner 再次启用；目标可为 Google account 或 Workforce Identity Federation principal。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes"
+    ],
+    "analysis": "这是对共享 Agent 生命周期与责任交接的管理员控制面增强，但所有权移交不会自动迁移连接器授权、密钥、审批、审计、告警或成本责任。",
+    "insight": "将 owner、共享、触发器、身份委托、连接器/凭证、外部副作用、预算、审计与停用状态纳入同一资产契约；人员变动先冻结再复核、交接并按需重新启用。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 79
+  },
+  {
+    "id": "google-gemini-enterprise-db-risk-analytics-data-store-ga-2026-09-22",
+    "published_at": "2026-09-22T00:00:00-07:00",
+    "collected_at": "2026-09-24T09:55:00+08:00",
+    "lane": "data_agent",
+    "source_tier": "P0",
+    "entity": "Google Gemini Enterprise",
+    "signal_type": "feature",
+    "title": "Gemini Enterprise D&B Risk Analytics data store 正式 GA",
+    "facts": [
+      "Google Cloud 在 2026 年 9 月 22 日的 Gemini Enterprise Release Notes 中宣布 D&B Risk Analytics data store 正式 GA。",
+      "该 data store 可连接 D&B Risk Analytics tenant，并以自然语言运行 KYB onboarding、counterparty due diligence、sanctions and adverse media screening、supplier 和 financial risk workflow。",
+      "官方列出的受支持动作包括创建 entity、启动 screening、更新 tags 和 custom fields。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes"
+    ],
+    "analysis": "该发布将第三方风险数据连接与受支持写操作带入企业 Agent 工作流，但 GA 不等同于筛查结论正确、适用于所有地区/租户，或可省略审批与审计。",
+    "insight": "将数据连接身份、可读字段、实体去重、动作目标确认、幂等、人工复核、异常升级和审计保留作为行动型 DataAgent 的前置合同。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 74
   }
 ]

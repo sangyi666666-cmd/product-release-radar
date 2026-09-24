@@ -31,6 +31,20 @@
 - 扫描重点：工具调用、异步执行、上下文与长任务、Coding/Browser/Computer Use、成本与缓存、API 和产品开放范围、安全与治理。
 - 核验规则：发布、可用、灰度、地区和套餐分别记录；“即将开放”不得写成“当前所有用户可用”。
 
+## 办公 Agent 与企业 Agent 开发/治理平台
+
+### 固定对象与一手入口
+
+- **办公 Agent**：WorkBuddy（产品页、Enterprise 文档与开放平台文档）、豆包工作、千问办公、Qoder 全系列。每天检查正式公告、产品/帮助中心、Release Notes、定价页与公开的连接器/Skill 文档；重点核验办公入口、跨应用执行、本地/云端边界、连接器、数据与身份、恢复、审批、套餐/地区和企业协作状态。
+- **企业 Agent 开发与治理平台**：阿里云 AgentCore / 公开 AgentRun 能力、WorkBuddy 开放平台、AWS Bedrock AgentCore、Microsoft Foundry Agent Service / Control Plane、Google Gemini Enterprise / Agent Platform、火山引擎 AgentKit / HiAgent、LangSmith / LangSmith Deployment。优先扫描各自官方 overview、Release Notes、SDK/API 文档、security/IAM 文档、pricing/SLA 与官方 GitHub Release。
+- **已确认的固定公开入口**：WorkBuddy 开放平台 `https://open.workbuddy.cn/`；AWS AgentCore Release Notes `https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html`；Microsoft Foundry Agents 概览 `https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview`；Gemini Enterprise Release Notes `https://docs.cloud.google.com/gemini/enterprise/docs/release-notes`；火山引擎 AgentKit `https://www.volcengine.com/product/agentkit`；Qoder Release Notes `https://docs.qoder.com/zh/release-notes/qoder`；LangSmith Deployment 文档 `https://docs.langchain.com/langsmith/deployment`。
+
+### 每日筛选与记录规则
+
+- 办公 Agent 与业务 Worker 分开建卡：办公 Agent 重点记录任务入口、跨应用动作、用户/组织数据边界和人工接管；业务 Worker 重点记录职责、流程、任务 owner、外部副作用和结果度量。
+- 平台能力按 `开发编排、Runtime/Harness、Tool/MCP、身份权限、Sandbox、记忆/知识、发布版本、评测/观测、成本、审计审批、恢复/回滚` 逐项核验。公告中的能力列表不是产品成熟度或已获授权执行的证据。
+- 对每个新信号分开记录发布状态（GA、Preview、定向访问、分批灰度、API 可调用、所有套餐可用）、地区/套餐、兼容性与迁移要求；未能由 P0 确认的名称、版本或归属仅作扫描线索，绝不写入对外日报或事件 JSON。
+
 ## Unite.AI
 
 - 中文站：https://www.unite.ai/zh-cn/

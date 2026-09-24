@@ -19,7 +19,9 @@
 | --- | --- |
 | Agent 开发平台 | Builder、Runtime、Tool/Skill、MCP/A2A、Context、Evaluation、Observability、Governance、Lifecycle、生态与定价 |
 | 数字员工 / AI Worker | Job/Task/SOP 建模、Worker 身份与记忆、Agent Team、人机协同、审批接管、业务系统连接、运营与价值度量 |
+| 办公 Agent | 文档、会议、邮件、表格、知识与跨应用任务；本地/云端执行、连接器与 Skills、长任务恢复、个人数据边界、组织共享与从个人效率到团队协作的转化 |
 | DataAgent | 数据连接、语义层、NL2SQL、多步分析、代码执行、证据引用、权限、评测、主动洞察和行动闭环 |
+| 企业 Agent 开发与治理平台 | Builder/SDK、Runtime/Harness、Tool/MCP Gateway、Sandbox、身份与权限、记忆/知识、发布与版本、评测、Trace/Observability、成本、审计、策略、审批与回滚 |
 | 通用工作 Agent / Agentic Coding | 桌面、Web、IDE、CLI 和移动入口；本地/云端执行；长任务、产物、多 Agent 协作、安全与商业化 |
 | 基础模型与 Agent Infra | 工具调用、长上下文、记忆、Coding/Browser/Computer Use、延迟、成本、API 可用性、安全与治理 |
 | 产业与生态 | AI 基础设施、重要开源项目、企业公开案例、融资、并购、战略投资和生态整合 |
@@ -178,11 +180,19 @@ Markdown 是正式档案，结构化事件用于去重和周报聚合，GitHub I
 
 ## 十、核心 Watchlist
 
-- **Agent 平台**：火山引擎 AgentKit/VeADK、AWS Bedrock AgentCore、Microsoft Foundry/Agent Framework、Google ADK/Agent Platform、Salesforce Agentforce、ServiceNow、Dify、LangGraph、CrewAI、LlamaIndex。
-- **AI Worker**：Workday Sana、SAP Joule、Oracle、UiPath、Microsoft Agent 365、Salesforce、ServiceNow、豆包工作、QoderWork/QoderWake、Claude Cowork、Kimi Work、Manus、Genspark。
+- **办公 Agent**：WorkBuddy、豆包工作、千问办公、Qoder 全系列（含 Work/Wake、CLI、Mobile、Cloud Agents、SDK、Security、Voice 等公开命名能力）。固定观察办公入口、文件/会议/知识/跨应用任务、连接器与 Skill 生态、本地与云端运行边界、任务恢复、身份/数据隔离、审批接管、定价和组织协作证据。
+- **企业 Agent 开发与治理平台**：阿里云 AgentCore / 公开 AgentRun 能力、WorkBuddy 开放平台、AWS Bedrock AgentCore、Microsoft Foundry Agent Service / Control Plane、Google Gemini Enterprise / Agent Platform、火山引擎 AgentKit / HiAgent、LangSmith / LangSmith Deployment；并持续关注 Salesforce Agentforce、ServiceNow、Dify、LangGraph、CrewAI、LlamaIndex。固定比较 `开发编排、运行时、工具/MCP、身份权限、Sandbox、记忆/知识、发布版本、评测/观测、成本、审计审批与回滚`，不以功能清单替代实测。
+- **AI Worker（业务角色）**：Workday Sana、SAP Joule、Oracle、UiPath、Microsoft Agent 365、Salesforce、ServiceNow、Claude Cowork、Kimi Work、Manus、Genspark。与办公 Agent 分开记录：前者按岗位/流程/结果与人机协同评估，后者按办公任务和跨应用执行边界评估。
 - **DataAgent**：Databricks Genie、Snowflake Cortex、Google Conversational Analytics、Microsoft Fabric Data Agent、ThoughtSpot、Tableau、WrenAI、Vanna、DB-GPT。
 - **Agentic Coding**：OpenAI Codex、Qoder、Cursor、Devin、GitHub Copilot Coding Agent、Google Jules。
 - **基础模型**：OpenAI GPT/Codex、Anthropic Claude、Google Gemini、DeepSeek、通义、豆包、混元、Kimi、GLM 及重要开源模型。
+
+### 观察与纳入边界
+
+- 上述名单是**发现与固定扫描清单**，不是对产品成熟度、通用可用性、组织归属或商业效果的背书。
+- 只有产品供应商公开的公告、文档、Release Notes、定价/服务条款、官方 GitHub Release 或客户/监管一手材料，才能将具体能力、版本、地区、套餐、定价、企业案例或融资状态写入对外日报。
+- 名称、版本或归属尚无公开一手材料可确认的候选，仅保留为内部扫描关键词；不得把截图、观察记录、媒体转述或控制台可见信息复制到公开日报，也不得将其写入结构化事件。
+- 两条主线的高价值增量优先级为：正式发布/GA、Preview 或可用范围变化、破坏性迁移与安全修复、运行时/治理能力实质变化、经过一手材料确认的企业上线或可审查效果；无新增事实时只在观察池记录，不重复占用日报篇幅。
 
 ## 十一、质量指标
 
