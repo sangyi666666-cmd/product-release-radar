@@ -140,5 +140,32 @@
     "recommended_action": "试用",
     "confidence": "high",
     "score": 74
+  },
+  {
+    "id": "alibaba-cloud-agentcore-yunqi-launch-2026-09-22",
+    "published_at": "2026-09-22T00:00:00+08:00",
+    "collected_at": "2026-09-24T10:10:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P1",
+    "entity": "Alibaba Cloud AgentCore",
+    "signal_type": "release",
+    "title": "阿里云在云栖大会推出 AgentCore 智能体构建和治理平台",
+    "facts": [
+      "新华网于 2026 年 9 月 22 日报道，阿里云在云栖大会推出 Agent 构建治理平台 AgentCore，并将其与 Agent Sandbox、CPFS 等列为 Agentic Cloud 系列新品。",
+      "阿里云开发者社区会前专场说明称，9 月 23 日“Agent 工程化：AgentCore 让企业智能体走进生产”将全新发布 Alibaba Cloud AgentCore 及企业级落地白皮书，覆盖构建、运行、治理、协作、评估、优化全生命周期。",
+      "阿里云官方产品概述将 AgentCore 定义为智能体构建和治理平台，列出统一管理 Agent、模型连接、MCP、Skill、凭证和 Team；当前文档列出杭州、上海、深圳、北京和新加坡支持地域。",
+      "阿里云官方计费说明列出按量计费的 Compute CU、Gateway CU、Storage CU 与可选专属协作控制面。"
+    ],
+    "source_urls": [
+      "https://www.xinhuanet.com/tech/20260922/6bd1c77079d74175a692fca1b3f13edd/c.html",
+      "https://developer.aliyun.com/article/1761911",
+      "https://help.aliyun.com/zh/agentcore/agentcore-product-overview",
+      "https://help.aliyun.com/en/agentcore/agentcore-billing-instructions"
+    ],
+    "analysis": "公开材料表明 AgentCore 是将多种 Agent 构建/运行方式、资产与协作对象置于统一控制面的企业平台；发布日由大会报道支持，但尚无同日官方 GA 新闻稿或完整账户/地域开放声明，不能外推为所有租户可用。",
+    "insight": "企业选型应对同一任务链验证资产登记、身份/凭证、模型与工具、运行环境、Team、Trace/评测、人工干预、发布回滚和成本归因，而非只比较创建 Agent 的界面。",
+    "recommended_action": "深拆",
+    "confidence": "medium",
+    "score": 84
   }
 ]
