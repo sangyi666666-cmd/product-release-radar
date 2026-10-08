@@ -143,7 +143,27 @@
       "https://github.com/trending?since=daily",
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-01%26sort%3Dupdated%26order%3Ddesc%26per_page%3D20",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-01%26sort%3Dupdated%26order%3Ddesc%26per_page%3D20",
-      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-01%26sort%3Dupdated%26order%3Ddesc%26per_page%3D20"
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-01%26sort%3Dupdated%26order%3Ddesc%26per_page%3D20",
+      "https://devblogs.microsoft.com/foundry/from-chatbots-to-automated-assistants-routines-in-microsoft-foundry-are-now-generally-available/",
+      "https://devblogs.microsoft.com/foundry/egress-controls-hosted-agent/",
+      "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "https://developers.openai.com/api/docs/changelog",
+      "https://openai.com/index/devday-2026-recap/",
+      "https://www.anthropic.com/claude-sonnet-5-5",
+      "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+      "https://cloud.tencent.com/document/product/1831/138968",
+      "https://cloud.tencent.com/document/product/1831/138969",
+      "https://open.workbuddy.cn/",
+      "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps/",
+      "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app/",
+      "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator/",
+      "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams/",
+      "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level/",
+      "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/",
+      "https://openai.com/index/gpt-6-for-everyone/",
+      "https://help.aliyun.com/zh/agentcore/agentcore-product-overview",
+      "https://help.aliyun.com/zh/agentcore/high-code-agent-deployment-guide"
     ]
   }
 }
