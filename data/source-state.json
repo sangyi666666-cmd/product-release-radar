@@ -129,6 +129,21 @@
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-09-17%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-09-17%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30",
       "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-09-17%26sort%3Dupdated%26order%3Ddesc%26per_page%3D30"
+    ],
+    "2026-10-08": [
+      "https://www.anthropic.com/claude-haiku-5-5",
+      "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+      "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/",
+      "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli/",
+      "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes",
+      "https://www.anthropic.com/news/cyber-verification-program",
+      "https://openai.com/index/gpt-6-astra/",
+      "https://openai.com/index/safety-overview-gpt-6-astra/",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-01%26sort%3Dupdated%26order%3Ddesc%26per_page%3D20",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-01%26sort%3Dupdated%26order%3Ddesc%26per_page%3D20",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-01%26sort%3Dupdated%26order%3Ddesc%26per_page%3D20"
     ]
   }
 }

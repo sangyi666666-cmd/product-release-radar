@@ -1,0 +1,122 @@
+[
+  {
+    "id": "anthropic-claude-haiku-5-5-release-2026-10-07",
+    "published_at": "2026-10-07T00:00:00-07:00",
+    "collected_at": "2026-10-08T11:20:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "Anthropic Claude Haiku 5.5",
+    "signal_type": "release",
+    "title": "Claude Haiku 5.5 发布并调整高并发 Agent 成本与开放范围",
+    "facts": [
+      "Anthropic 于 2026 年 10 月 7 日发布模型 ID 为 claude-haiku-5-5 的 Claude Haiku 5.5，并定位其用于高并发、成本敏感的摘要、压缩、数据库查询、分类与子 Agent 工作。",
+      "官方给出的每百万 token、提示不超过 100k 的 Haiku 5.5 输入/输出价格为 0.10/0.50 美元，cache read/write 为 0.01/0.125 美元；更长提示另有更高档位价格。",
+      "Claude Haiku 5.5 已在 Claude Platform、AWS、Google Cloud 和 Microsoft Azure 可用。",
+      "Anthropic 同时将 Sonnet 5.5 cache read 价格下调 50%，并表示其网络安全防护仍会阻断渗透测试等更可能被滥用的技术。"
+    ],
+    "source_urls": [
+      "https://www.anthropic.com/claude-haiku-5-5"
+    ],
+    "analysis": "该发布同时改变小模型的成本/吞吐、Agent 子任务适配、API 与云平台可用范围及安全边界，适合作为 Agent Infra Top Signal；但官方材料不证明其可替代复杂长程 Agentic Coding 或高风险业务审批。",
+    "insight": "在将小模型用于子 Agent 前，先以任务所需工具、上下文、结构化输出、风险与最小质量阈值建立 capability gate，再在合格模型池内优化成本和速度。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 91
+  },
+  {
+    "id": "github-copilot-local-sandboxing-ga-2026-10-07",
+    "published_at": "2026-10-07T00:00:00-07:00",
+    "collected_at": "2026-10-08T11:20:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "feature",
+    "title": "GitHub Copilot local sandboxing 在 CLI、app 与 VS Code Agent Host GA",
+    "facts": [
+      "GitHub 于 2026 年 10 月 7 日宣布 local sandboxing 在 GitHub Copilot CLI、GitHub Copilot app 和使用 Agent Host 的 VS Code session 正式 GA。",
+      "该能力以开发者或组织策略限制 Copilot 发起的工具和命令对文件系统、网络、凭证及其他系统能力的访问。",
+      "官方称 Microsoft eXecution Container 将共同 sandbox 策略转换为 Windows、macOS 和 Linux 原生控制；企业可强制开发者不能弱化的策略。",
+      "模型执行与工具隔离是不同问题，sandbox 策略不随所选模型改变。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/"
+    ],
+    "analysis": "本地 Agent 工具隔离从 Preview 进入 GA，为 Coding Agent 提供正式的最小权限配置面；它不自动覆盖云端、扩展、MCP、供应链、代码审查或业务审批。",
+    "insight": "把模型策略和工具权限分开验证，并为每次任务保存有效 sandbox 策略、实际工具调用、拒绝原因、测试证据、人工决定与回滚位置。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 88
+  },
+  {
+    "id": "google-gemini-enterprise-antigravity-access-controls-2026-10-06",
+    "published_at": "2026-10-06T00:00:00-07:00",
+    "collected_at": "2026-10-08T11:20:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "Google Gemini Enterprise / Antigravity",
+    "signal_type": "feature",
+    "title": "Gemini Enterprise 管理员可 GA 控制 Antigravity Boost 与 Teamwork 准入",
+    "facts": [
+      "Google Cloud 2026 年 10 月 6 日 Release Notes 显示，Gemini Enterprise 管理员可控制组织用户能否访问 Google Antigravity 的 Boost 和 Teamwork。",
+      "Boost 使用分层多 Agent 结构处理复杂算法与深度调试，在 Antigravity 为 GA。",
+      "Teamwork 使用协调式自治子 Agent 执行大规模、长周期项目，在 Antigravity 仍为 Preview。",
+      "上述管理员设置在 Gemini Enterprise 侧为 GA。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes"
+    ],
+    "analysis": "管理员控制面为 GA 不会改变 Teamwork 的 Preview 状态；企业能控制能力准入，但仍需分别治理身份委托、数据访问、预算、审计、外部副作用与任务验收。",
+    "insight": "将多 Agent 能力开关绑定到人群、任务风险、工具/数据权限、模型预算、owner、日志、人工中断和回退方案，而不是只配置一个全局启用开关。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "anthropic-cyber-verification-program-expansion-2026-10-06",
+    "published_at": "2026-10-06T00:00:00-07:00",
+    "collected_at": "2026-10-08T11:20:00+08:00",
+    "lane": "ai_platform",
+    "source_tier": "P0",
+    "entity": "Anthropic Cyber Verification Program",
+    "signal_type": "feature",
+    "title": "Anthropic 扩展分级网络安全验证访问计划",
+    "facts": [
+      "Anthropic 于 2026 年 10 月 6 日发布扩展版 Cyber Verification Program，设 Defense Access、Red Team Access 与 Specialized Access 三档。",
+      "各档针对不同任务范围配置验证要求和安全控制；Red Team Access 仅允许对获授权系统进行对抗测试。",
+      "参与组织需要数据保留以支持滥用监测；官方称 Enterprise Frontier Safeguards 将在今年秋季晚些时候推出，尚非当前普遍可用。",
+      "CVP 在 Claude Platform、Google Cloud Vertex AI 和 Microsoft Foundry 可用；Amazon Bedrock 仅限符合 EFS 资格的客户。"
+    ],
+    "source_urls": [
+      "https://www.anthropic.com/news/cyber-verification-program"
+    ],
+    "analysis": "这是将更宽网络安全能力与资格验证、任务授权、实时阻断和数据处理条件绑定的分级访问计划，不是对普通账户取消安全限制。",
+    "insight": "高风险 Agent 应把授权范围、任务证据、实时策略、审计保留、人工停止和事后报告作为可执行合同，并避免将零数据保留与敏感能力扩大访问同时假定为默认状态。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 77
+  },
+  {
+    "id": "github-copilot-cli-local-model-discovery-2026-10-07",
+    "published_at": "2026-10-07T00:00:00-07:00",
+    "collected_at": "2026-10-08T11:20:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot CLI",
+    "signal_type": "feature",
+    "title": "Copilot CLI 支持发现本机 Ollama 模型但不自动进入离线模式",
+    "facts": [
+      "GitHub 于 2026 年 10 月 7 日宣布 Copilot CLI 1.0.94-0 起可通过 /model 从运行中的本机 Ollama 实例发现模型。",
+      "该流程不会安装 runtime、下载模型、自动添加模型或自动切换，用户需确认 provider 与 endpoint；模型必须支持 tool calling 和 streaming。",
+      "官方明确选择本地模型不会自动开启离线模式或禁用 GitHub telemetry。",
+      "即使设置 COPILOT_OFFLINE=true，远程 provider 仍可能通过网络接收 prompt 和代码上下文。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli/"
+    ],
+    "analysis": "本机模型发现改善了 provider 选择体验，但本地权重、离线模式、网络出口、遥测、MCP 和工具执行仍是不同控制面，不能从 local 标签推出数据不出设备。",
+    "insight": "会话级审计应记录实际 provider/endpoint、模型、网络模式、遥测、MCP/扩展、文件挂载和 sandbox 策略，才能回答哪些数据离开设备。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 74
+  }
+]
