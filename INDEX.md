@@ -6,6 +6,7 @@
 
 ## 日报
 
+- [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-10-10.md)
 - [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-10-08.md)
 - [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-09-24.md)
 - [企业级 Agent / AI Worker / DataAgent 行业雷达](./reports/daily/2026-09-23.md)

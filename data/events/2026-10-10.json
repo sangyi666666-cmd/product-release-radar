@@ -1,0 +1,97 @@
+[
+  {
+    "id": "google-gemini-agent-work-launch-2026-10-08",
+    "published_at": "2026-10-08T00:00:00-07:00",
+    "collected_at": "2026-10-10T09:47:18+08:00",
+    "lane": "work_agent",
+    "source_tier": "P0",
+    "entity": "Google Gemini agent / Gemini Enterprise",
+    "signal_type": "release",
+    "title": "Google 发布面向工作的 Gemini agent，并描述跨端长任务、多 Agent 与治理控制面",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 8 日宣布 Gemini agent，描述为单一工作 Agent 与单一 API，可处理知识工作、内容创作和代码任务，并调度工具、Skills 与连接的系统。",
+      "官方称该 Agent 可跨 Web、移动、桌面、命令行、Google Workspace、Microsoft 365 与 Slack 等入口使用，可在云端持续运行，并可创建临时子 Agent 和具有独立身份/存储的 coworker agent。",
+      "公告描述了工具/Skills 注册表、MCP 连接、多模型编排、项目级实时 spend cap、Agent Sandbox 与 Agent Gateway 等机制。",
+      "金融服务和法律的行业专用能力明确为 Preview；政府、医疗和零售被描述为后续计划，公告未将所有组成能力表述为全地区、全套餐普遍 GA。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026/"
+    ],
+    "analysis": "该发布把工作入口、跨端持续执行、多 Agent、工具/上下文、模型路由、预算与治理同时纳入平台叙事，是高价值 Agent 平台信号；但需逐项核验产品状态、地区、套餐与计费，不能把公告能力图外推为普遍可用。",
+    "insight": "持久 Worker 应以角色、触发、上下文、权限、预算、证据和停机为独立且可审计的契约；模型路由不应间接扩大其数据或工具权限。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 91
+  },
+  {
+    "id": "github-copilot-code-review-organization-billing-controls-2026-10-08",
+    "published_at": "2026-10-08T00:00:00-07:00",
+    "collected_at": "2026-10-10T09:47:18+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot Code Review",
+    "signal_type": "feature",
+    "title": "Copilot Code Review 新增组织计费和授权请求者控制",
+    "facts": [
+      "GitHub 于 2026 年 10 月 8 日宣布，组织所有者可选择由成员自己的 Copilot entitlement（默认）或仓库所属组织承担 Copilot Code Review 费用。",
+      "组织计费模式要求启用 AI Credits 付费使用，并可设置预算；默认成员额度耗尽时审查会失败。",
+      "组织所有者和仓库管理员可限制仅由本组织或企业提供许可证的用户触发审查；若在组织级启用，仓库管理员不能关闭。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/"
+    ],
+    "analysis": "该更新把审查 Agent 的成本归属和请求者身份变为组织可配置策略，但不保证审查正确性，也不替代分支保护、CI、人工合并与工具审计。",
+    "insight": "对有资源消耗或外部副作用的 Agent，应将授权、预算、使用者身份和结果责任分别建模并记录。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 80
+  },
+  {
+    "id": "openai-gpt-6-1-sol-ultrafast-responses-2026-10-08",
+    "published_at": "2026-10-08T00:00:00-07:00",
+    "collected_at": "2026-10-10T09:47:18+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "OpenAI GPT-6.1 Sol / Responses API",
+    "signal_type": "feature",
+    "title": "GPT-6.1 Sol 在 Responses API 新增 Ultrafast 服务档",
+    "facts": [
+      "OpenAI API Changelog 于 2026 年 10 月 8 日列出，Responses API 中的 gpt-6.1-sol 支持 service_tier: ultrafast，用于降低生成输出 token 之间的间隔。",
+      "该服务档面向所有 API 用户，但受速率限制。",
+      "官方列明该档支持全球处理以及美国和欧盟数据驻留。"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/changelog"
+    ],
+    "analysis": "这是吞吐/时延和部署选项更新，未宣布模型能力、工具权限、长任务恢复或安全边界同步变化；不应将其写成新模型发布或可靠性提升。",
+    "insight": "长程任务需要将模型输出速率、工具等待、限流、用户可见进度和数据地域分开观测。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 76
+  },
+  {
+    "id": "aws-agentcore-payments-blockrun-incarna-case-2026-10-08",
+    "published_at": "2026-10-08T00:00:00-07:00",
+    "collected_at": "2026-10-10T09:47:18+08:00",
+    "lane": "enterprise_case",
+    "source_tier": "P0",
+    "entity": "Amazon Bedrock AgentCore payments / Incarna / BlockRun",
+    "signal_type": "case",
+    "title": "AWS 发布 AgentCore payments 按请求支付推理的生产案例",
+    "facts": [
+      "AWS 于 2026 年 10 月 8 日发布案例，称 Incarna 使用 AgentCore payments 向 BlockRun 按请求购买模型推理。",
+      "AWS 文档说明 AgentCore payments 提供支付连接、钱包、限额、处理与可观测性，并支持使用 x402 或 MPP 为付费 API、MCP 服务和网页内容支付。",
+      "支付会话可设置 maxSpendAmount 和到期时间；达到限额或会话过期后，后续支付请求会被拒绝。",
+      "案例中的接入周期与生产效果为 AWS/合作方材料，不应外推为通用效益。"
+    ],
+    "source_urls": [
+      "https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-how-it-works.html"
+    ],
+    "analysis": "把额度、凭证和交易状态放到基础设施层可比提示词预算更可验证，但不替代商户可信度、许可、地区合规、财务审批或争议处置。",
+    "insight": "付费副作用 Agent 应具备可付对象白名单、单笔/单会话/周期上限、过期、签名权限、失败释放、对账和人工升级。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 73
+  }
+]

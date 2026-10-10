@@ -164,6 +164,17 @@
       "https://openai.com/index/gpt-6-for-everyone/",
       "https://help.aliyun.com/zh/agentcore/agentcore-product-overview",
       "https://help.aliyun.com/zh/agentcore/high-code-agent-deployment-guide"
+    ],
+    "2026-10-10": [
+      "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026/",
+      "https://developers.openai.com/api/docs/changelog",
+      "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/",
+      "https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-how-it-works.html",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-03%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-03%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-03%26sort=updated%26order=desc%26per_page=30"
     ]
   }
 }
