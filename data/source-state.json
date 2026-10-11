@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-10-10",
+  "last_successful_daily": "2026-10-11",
   "last_successful_weekly": "2026-W37",
   "seen_urls": [],
   "confirmed_sources": {
@@ -175,6 +175,16 @@
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-03%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-03%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-03%26sort=updated%26order=desc%26per_page=30"
+    ],
+    "2026-10-11": [
+      "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains/",
+      "https://docs.cloud.google.com/gemini/docs/release-notes",
+      "https://docs.cloud.google.com/release-notes/",
+      "https://github.com/opensandbox-group/OpenSandbox/releases/tag/release-1.1.1",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-04%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-04%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-04%26sort=updated%26order=desc%26per_page=30"
     ]
   }
 }
