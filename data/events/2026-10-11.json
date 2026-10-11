@@ -1,0 +1,94 @@
+[
+  {
+    "id": "github-copilot-jetbrains-managed-default-model-mcp-startup-2026-10-10",
+    "published_at": "2026-10-10T00:00:00Z",
+    "collected_at": "2026-10-11T08:59:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot for JetBrains",
+    "signal_type": "feature",
+    "title": "Copilot for JetBrains 增加企业默认模型与 MCP 自动启动控制",
+    "facts": [
+      "GitHub 于 2026 年 10 月 10 日宣布，企业管理员可通过 managed settings 为新的 Copilot 会话选择任一可用 agent model 作为默认模型，用户仍可使用 model picker 显式选择模型。",
+      "更新新增 MCP 设置，可关闭 Copilot 和 Claude 的 MCP server 自动启动。",
+      "GitHub 同时宣布 Copilot 不再支持 JetBrains IDE 2025.1，需使用 2025.2 或更高版本。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains/"
+    ],
+    "analysis": "默认模型与工具自动启动时机成为企业可配置面，但不构成模型锁定、MCP 禁用、网络隔离或凭证回收的证明。",
+    "insight": "应分别审计组织默认值、用户覆写、工具注册、工具激活、实际调用与外部副作用。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 83
+  },
+  {
+    "id": "google-gemini-code-assist-new-subscription-sales-end-2026-10-09",
+    "published_at": "2026-10-09T00:00:00Z",
+    "collected_at": "2026-10-11T08:59:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "Google Gemini Code Assist / Antigravity",
+    "signal_type": "pricing",
+    "title": "Google 停止销售新的 Gemini Code Assist 订阅，并给出 Antigravity 迁移方向",
+    "facts": [
+      "Google Cloud Release Notes 写明，自 2026 年 10 月 9 日起，新的 Gemini Code Assist Standard 和 Enterprise 订阅不能再购买。",
+      "现有订阅可在 2026 年余下时间自动续订，但自动续订将在 2027 年结束。",
+      "官方建议替代 AI 开发工具为符合条件 Gemini Enterprise 订阅和 Gemini Enterprise Agent Platform 中的 Antigravity。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/gemini/docs/release-notes"
+    ],
+    "analysis": "这是一项商业可得性与产品入口迁移安排，不证明 Antigravity 对既有 Code Assist 功能、地区、价格、合同或数据处理条款完全等价。",
+    "insight": "开发工具迁移需要同时盘点合同、身份、工作流、连接器、日志、预算、数据地域和退出路径。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "google-bigquery-data-engineering-agent-tokyo-gemini-3-5-flash-2026-10-09",
+    "published_at": "2026-10-09T00:00:00Z",
+    "collected_at": "2026-10-11T08:59:00+08:00",
+    "lane": "data_agent",
+    "source_tier": "P0",
+    "entity": "BigQuery Data Engineering Agent",
+    "signal_type": "feature",
+    "title": "BigQuery Data Engineering Agent 支持东京 regional endpoint 与 Gemini 3.5 Flash",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 9 日列出，BigQuery Data Engineering Agent 已可在 asia-northeast1（东京）regional endpoint 使用。",
+      "同一更新列出该 Agent 支持 gemini-3.5-flash 模型。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/release-notes/"
+    ],
+    "analysis": "区域 endpoint 与模型选择是 DataAgent 的部署增量，但不证明所有数据、推理、日志、跨区域查询与恢复产物都自动同地域或普遍可用。",
+    "insight": "DataAgent 的地域验收应区分控制面、数据读取和计算、模型推理、日志审计及跨区域失败行为。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 76
+  },
+  {
+    "id": "opensandbox-1-1-1-runtime-isolation-reliability-release-2026-10-09",
+    "published_at": "2026-10-09T15:09:23Z",
+    "collected_at": "2026-10-11T08:59:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "OpenSandbox",
+    "signal_type": "release",
+    "title": "OpenSandbox 1.1.1 修复 server wheel 安装故障并更新隔离与错误恢复能力",
+    "facts": [
+      "OpenSandbox 于 2026 年 10 月 9 日发布 stable release-1.1.1，并说明 1.1.0 的 opensandbox-server wheel 缺少 FastPath gRPC stubs，导致安装后 import 失败，官方建议 1.1.0 用户升级。",
+      "1.1.1 在五种 SDK 中加入显式 Linux UID/GID 的文件操作接口，并为 isolated session 增加多个独立 overlay mount。",
+      "Release 为 Kubernetes 共享 namespace 中带租户标记的 sandbox 增加可见性隔离，并将代理后端超时和中途响应故障分别映射为 504 和 502。",
+      "官方明确，身份绑定文件 API 执行文件权限检查，但不是租户隔离边界。"
+    ],
+    "source_urls": [
+      "https://github.com/opensandbox-group/OpenSandbox/releases/tag/release-1.1.1"
+    ],
+    "analysis": "这是 Agent sandbox 运行时可靠性与防护更新，升级会改变错误码和部分 SDK 重试行为，不能被解释为自动完成隔离或多租户安全。",
+    "insight": "Sandbox 安全需要把运行时身份、文件系统、挂载、网络出口、凭证、租户可见性和生命周期作为完整合同验收。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 75
+  }
+]
