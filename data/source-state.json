@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-10-11",
+  "last_successful_daily": "2026-10-12",
   "last_successful_weekly": "2026-W37",
   "seen_urls": [],
   "confirmed_sources": {
@@ -185,6 +185,16 @@
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-04%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-04%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-04%26sort=updated%26order=desc%26per_page=30"
+    ],
+    "2026-10-12": [
+      "https://docs.volcengine.com/docs/AgentKit/IAMoverview-20?lang=zh",
+      "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/",
+      "https://github.com/the-long-ride/aevra/releases/tag/v1.2.0",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-05%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-05%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-05%26sort=updated%26order=desc%26per_page=30"
     ]
   }
 }
