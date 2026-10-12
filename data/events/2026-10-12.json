@@ -1,0 +1,72 @@
+[
+  {
+    "id": "volcengine-agentkit-skill-workbench-2026-10-10",
+    "published_at": "2026-10-10T00:00:00+08:00",
+    "collected_at": "2026-10-12T09:15:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "火山引擎 AgentKit",
+    "signal_type": "feature",
+    "title": "AgentKit 新增技能工作台，聚合近期访问技能与质量、安全、评测待办",
+    "facts": [
+      "火山引擎 AgentKit 官方发布动态记录，2026 年 10 月 10 日新增技能工作台，聚合近期访问技能以及质量、安全、评测相关待办，供用户快速定位并集中处理。",
+      "该条目列出的发布地域为华北 2（北京）和华东 2（上海）。",
+      "官方页面说明新特性会按地域陆续发布，未将该功能描述为全地域、全账户或全套餐同步可用。"
+    ],
+    "source_urls": [
+      "https://docs.volcengine.com/docs/AgentKit/IAMoverview-20?lang=zh"
+    ],
+    "analysis": "该更新将技能生命周期中的访问、质量、安全与评测待办聚合到一个运营入口，但不等于新的 Runtime、模型或治理闭环；其效果仍取决于版本、调用证据、负责人、暂停和回滚是否可追溯。",
+    "insight": "Skill 应独立记录版本、发布范围、工具和数据域、调用/拒绝/接管记录、质量安全证据、负责人及下线条件。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 81
+  },
+  {
+    "id": "github-copilot-app-separate-license-repository-accounts-worktree-cleanup-2026-10-09",
+    "published_at": "2026-10-09T00:00:00Z",
+    "collected_at": "2026-10-12T09:15:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot app / VS Code",
+    "signal_type": "feature",
+    "title": "Copilot app 支持分离许可证与仓库账户，并提供 Agent 会话 worktree 清理入口",
+    "facts": [
+      "GitHub 于 2026 年 10 月 9 日说明，Copilot app 可分别设置用于 Copilot 许可证的 GitHub 账户和用于访问仓库的账户。",
+      "同一更新说明，VS Code 1.141 的 Agents 窗口可并排、网格化查看 Agent 会话。",
+      "更新还提供 worktree cleanup 入口，可查看非活跃会话 worktree 的磁盘占用并选择清理。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/"
+    ],
+    "analysis": "许可证账户与仓库账户分离改善客户端身份组合的可用性，但不代表跨账户授权、审计统一或数据隔离；worktree 清理也不替代对任务产物和凭证残留的生命周期治理。",
+    "insight": "许可证、代码访问、工具凭证、任务发起、产物所有权和费用归属应分别记录与撤销。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 80
+  },
+  {
+    "id": "aevra-v1-2-tool-groups-token-usage-release-2026-10-09",
+    "published_at": "2026-10-09T01:34:53Z",
+    "collected_at": "2026-10-12T09:15:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "aevra",
+    "signal_type": "release",
+    "title": "aevra 1.2.0 增加按连接器工具组、显式拒绝和最小化 token 用量记录",
+    "facts": [
+      "aevra 于 2026 年 10 月 9 日发布 v1.2.0，并新增按连接器配置的工具组，包括 files、commands、git、browser、desktop 与 control 等。",
+      "Release 说明，调用已禁用的工具组会返回 TOOL_GROUP_DISABLED 错误码。",
+      "该版本新增 SQLite token 用量记录，包含调用数、错误数、输入/输出/节省 token 与耗时；Release 说明该表不保存命令参数、输出或文件路径。",
+      "Release 同时列出连接器配置 API 和管理员界面。"
+    ],
+    "source_urls": [
+      "https://github.com/the-long-ride/aevra/releases/tag/v1.2.0"
+    ],
+    "analysis": "这是开源 MCP 网关的能力更新，工具组和拒绝码能收紧调用面并提升可观测性，但不替代网络隔离、沙箱、凭证治理、审批或多租户边界。",
+    "insight": "工具网关应为每个调用方暴露最小工具面，并将拒绝、预算和审计设计成稳定的机器可读事件。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 69
+  }
+]
