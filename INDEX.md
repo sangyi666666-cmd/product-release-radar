@@ -30,6 +30,7 @@
 
 ## 周报
 
+- [企业级 Agent / AI Worker / DataAgent 周度趋势总结](./reports/weekly/2026-W41.md)
 - [企业级 Agent / AI Worker / DataAgent 周度趋势总结](./reports/weekly/2026-W37.md)
 - [企业级 Agent / AI Worker / DataAgent 周度趋势总结](./reports/weekly/2026-W36.md)
 
