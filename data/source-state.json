@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-10-12",
+  "last_successful_daily": "2026-10-15",
   "last_successful_weekly": "2026-W37",
   "seen_urls": [],
   "confirmed_sources": {
@@ -195,6 +195,19 @@
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-05%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-05%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-05%26sort=updated%26order=desc%26per_page=30"
+    ],
+    "2026-10-15": [
+      "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud/",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon",
+      "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/",
+      "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option/",
+      "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/",
+      "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture/",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-08%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-08%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-08%26sort=updated%26order=desc%26per_page=30"
     ]
   }
 }

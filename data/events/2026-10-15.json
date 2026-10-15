@@ -1,0 +1,101 @@
+[
+  {
+    "id": "google-gemini-4-argon-ga-agent-platform-2026-10-13",
+    "published_at": "2026-10-13T00:00:00Z",
+    "collected_at": "2026-10-15T09:35:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "Google Gemini 4 Argon",
+    "signal_type": "release",
+    "title": "Gemini 4 Argon 在 Gemini Enterprise Agent Platform GA，提供统一百万 token 上限与长解码",
+    "facts": [
+      "Gemini Enterprise Agent Platform Release Notes 在 2026 年 10 月 13 日将 Gemini 4 Argon 标为 GA。",
+      "官方文档说明其输入和输出共用 1,048,576 token 上限，输出包含思考、函数调用和最终响应；GenerateContent 可使用 continuation token 将生成延伸到该上限。",
+      "官方开发者指南说明显式 context caching 不受支持，连续请求可使用隐式缓存；工具指令、函数声明和思考 token 也会计费。",
+      "模型可从 global、us、eu 入口调用；长解码仅支持 v1beta1 API。Cyber Permissive 变体受 Fairwind Program allowlist 限制。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud/",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
+    ],
+    "analysis": "这项 GA 同时改变长任务、函数调用、缓存/计费和开放范围等 Agent Infra 维度；统一上限与 continuation 不等于任务可恢复、工具可治理或端到端成本可控。",
+    "insight": "模型接入应将 continuation、统一 token 预算、工具/思考 token、缓存、API 版本、地区和失败码纳入任务执行证据。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 93
+  },
+  {
+    "id": "github-copilot-gemini-4-argon-gradual-rollout-2026-10-13",
+    "published_at": "2026-10-13T00:00:00Z",
+    "collected_at": "2026-10-15T09:35:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "feature",
+    "title": "GitHub Copilot 上线 Gemini 4 Argon，但按套餐、策略和客户端渐进推出",
+    "facts": [
+      "GitHub 于 2026 年 10 月 13 日宣布 Gemini 4 Argon 在 GitHub Copilot 中 GA，并按 provider list pricing 进行按量计费。",
+      "官方列出的入口包括 VS Code、Visual Studio、Copilot CLI、Copilot coding agent、Copilot app、JetBrains、Xcode 和 Eclipse。",
+      "该模型面向 Copilot Pro+、Max、Business、Enterprise 用户，但 GitHub 明确说明 rollout 将逐步进行。",
+      "Business 和 Enterprise 管理员可通过 model policy 管理访问；默认模型启用时新模型通常自动启用，除非管理员关闭全局默认或显式禁用该模型。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/"
+    ],
+    "analysis": "这是同一基础模型在 Coding Agent 入口的扩展，而不是新的模型发布；实际可用性仍受套餐、按量计费、管理员策略、客户端和渐进 rollout 共同约束。",
+    "insight": "供应商模型状态、套餐资格、管理员策略、客户端可见性与费用归属应作为不同的可审计状态。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 84
+  },
+  {
+    "id": "github-copilot-hydrafusion-max-research-preview-2026-10-14",
+    "published_at": "2026-10-14T00:00:00Z",
+    "collected_at": "2026-10-15T09:35:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot HydraFusion",
+    "signal_type": "feature",
+    "title": "HydraFusion 更新模型池与工作流，并新增 HydraFusion Max 研究预览选项",
+    "facts": [
+      "GitHub 于 2026 年 10 月 14 日更新 HydraFusion 并新增 HydraFusion Max。",
+      "官方说明模型池包含 Claude Opus 5.5、GPT-6 Astra、GPT-6.1 Sol 与 GPT-6 Luna，并会按阶段调整 reasoning effort。",
+      "Cascade 可在质量判断后请求修复；Critique 更依赖工具直接检查 workspace，并可并行使用 critic models。",
+      "HydraFusion 与 Max 可在 VS Code、Copilot app 和 Copilot CLI 使用，面向符合条件的 Copilot 计划，但两者仍为 research preview。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option/"
+    ],
+    "analysis": "该更新产品化探索了工作流选择与多模型协作，但没有承诺每次任务的具体模型路径、可复现性、成本上限或写入工具的副作用治理。",
+    "insight": "多模型验收应以每个任务的执行图、模型/effort、工具调用、验证结果、总成本和人工接受率为单位。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "github-copilot-policy-freshness-minimal-telemetry-2026-10-12-13",
+    "published_at": "2026-10-13T00:00:00Z",
+    "collected_at": "2026-10-15T09:35:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot enterprise managed settings",
+    "signal_type": "feature",
+    "title": "Copilot 增加强制策略刷新、sandbox 最低客户端版本与默认关闭的 OTel 内容采集控制",
+    "facts": [
+      "GitHub 在 2026 年 10 月 13 日新增 forceRemoteSettingsRefresh，可要求 Copilot CLI、VS Code 和 Copilot app 在启动时获取当前服务器托管策略；若无法确认当前策略，客户端会 fail closed。",
+      "GitHub 同时为 sandbox managed setting 增加最低客户端版本要求，受控用户需更新后才能继续使用 Copilot。",
+      "10 月 12 日的更新允许企业使用 telemetry managed setting 采集 GitHub 登录账户、本机 OS 账户和主机名作为 OTel 归因；identity capture 默认关闭。",
+      "prompts、responses、toolArguments、toolOutput、policyDetail 五类内容采集均默认关闭，且显式托管设置优先于本地设置、SDK 配置和环境变量。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/",
+      "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture/"
+    ],
+    "analysis": "策略新鲜度可减少客户端带着过期 sandbox/治理规则执行的风险，最小化遥测可降低审计内容外泄面；但 fail closed 会把控制面不可达转化为任务不可用，需要运行保障和降级预案。",
+    "insight": "策略版本、客户端版本、刷新结果、身份归因和实际采集字段需要关联到同一执行证据链，并按审计目的最小化内容采集。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 85
+  }
+]
