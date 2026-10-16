@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_daily": "2026-10-15",
+  "last_successful_daily": "2026-10-16",
   "last_successful_weekly": "2026-W37",
   "seen_urls": [],
   "confirmed_sources": {
@@ -208,6 +208,18 @@
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-08%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-08%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-08%26sort=updated%26order=desc%26per_page=30"
+    ],
+    "2026-10-16": [
+      "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/",
+      "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
+      "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+      "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-09%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-09%26sort=updated%26order=desc%26per_page=30",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-09%26sort=updated%26order=desc%26per_page=30"
     ]
   }
 }

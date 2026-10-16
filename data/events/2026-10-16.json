@@ -1,0 +1,125 @@
+[
+  {
+    "id": "github-copilot-agentic-autofix-code-scanning-ga-2026-10-15",
+    "published_at": "2026-10-15T00:00:00Z",
+    "collected_at": "2026-10-16T11:10:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot Agentic autofix",
+    "signal_type": "release",
+    "title": "Copilot Agentic autofix for code scanning alerts 在 GitHub Enterprise Cloud GA",
+    "facts": [
+      "GitHub 于 2026 年 10 月 15 日宣布 Agentic autofix for code scanning alerts 正式 GA。",
+      "将默认分支上的 code scanning alert 分配给 Copilot 后，系统会探索相关文件、提出修复、重跑 CodeQL，并创建供人工审阅的 draft pull request。",
+      "可在告警列表或 security campaign 中最多选择 25 个告警合并处理为一个 PR，也可通过 REST API 把 copilot-swe-agent[bot] 设为 assignee。",
+      "功能面向 GitHub Enterprise Cloud 的 GitHub Code Security 和 GitHub Advanced Security 客户；需企业管理员策略、组织或仓库管理员设置与 Copilot 计费方式，消耗 Code Security AI Credits 和 GitHub Actions minutes。",
+      "仅默认分支上的 code scanning alerts 可被分配；仅出现在 pull request 或其他分支的告警不受支持。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/",
+      "https://docs.github.com/en/code-security/code-scanning/managing-code-scanning-alerts/automatically-fixing-code-scanning-alerts"
+    ],
+    "analysis": "该能力将安全告警、跨代码库探索、修改、CodeQL 回验和人工审阅串为一个受控任务，但静态扫描告警关闭不等于业务正确、依赖安全或生产 exploit 风险已完全消除。",
+    "insight": "安全修复 Agent 的验收应关联告警、规则版本、读取范围、diff、扫描/测试结果、审批、合并、成本和回滚，而不是只计量生成了多少 PR。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 86
+  },
+  {
+    "id": "google-gemini-enterprise-anthropic-models-app-ga-2026-10-15",
+    "published_at": "2026-10-15T00:00:00Z",
+    "collected_at": "2026-10-16T11:10:00+08:00",
+    "lane": "ai_platform",
+    "source_tier": "P0",
+    "entity": "Gemini Enterprise",
+    "signal_type": "feature",
+    "title": "Gemini Enterprise app 可由管理员启用 Claude Opus 5.5 与 Claude Sonnet 5.5，功能 GA",
+    "facts": [
+      "Gemini Enterprise Release Notes 于 2026 年 10 月 15 日记录，管理员可在 Feature Management 的 Enable third-party models 区域开启 Claude Opus 5.5 与 Claude Sonnet 5.5。",
+      "管理员开启后，用户可在 Gemini Enterprise app 的 model selector 中选择相应模型。",
+      "该功能为 GA；模型在 global、us、eu multi-regions 提供，按 pay-as-you-go 计费。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes",
+      "https://docs.cloud.google.com/gemini/enterprise/docs/enable-third-party-models"
+    ],
+    "analysis": "这是工作入口的第三方模型扩展，不是 Anthropic 模型新发布，也不意味着默认全员可见；管理员开关、地区、用户可见性和按量账单共同决定实际可用性。",
+    "insight": "组织需要将供应商模型版本、组织开关、地区、许可、任务实际 model ID、账单与工具/数据策略作为独立的可审计状态。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "google-gemini-4-argon-workflow-builder-ga-default-off-2026-10-14",
+    "published_at": "2026-10-14T00:00:00Z",
+    "collected_at": "2026-10-16T11:10:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "Gemini Enterprise Workflow Builder",
+    "signal_type": "feature",
+    "title": "Gemini 4 Argon 在 Workflow Builder 及 workflow agents GA，但应用入口默认关闭",
+    "facts": [
+      "Gemini Enterprise Release Notes 于 2026 年 10 月 14 日将 Gemini 4 Argon 在 Workflow Builder 和 Workflow Builder workflow agents 标为 GA。",
+      "该功能支持 global、us、eu multi-regions；us 和 eu 支持 data residency 与 machine learning processing。",
+      "应用入口默认关闭，官方说明开关将自 2026 年 10 月 27 日起默认开启。",
+      "模型更新进入 workflow agents 最多可能需要一天才会出现。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes",
+      "https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder"
+    ],
+    "analysis": "模型已经 GA 不等于所有 workflow 已被授权或已经切换；默认开关和配置传播期会使组织中同时存在不同的模型可用状态。",
+    "insight": "模型变更应作为可回滚的工作流发布管理，保存配置版本、启用主体、区域、传播状态和任务实际绑定的模型版本。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 80
+  },
+  {
+    "id": "github-copilot-selected-models-deprecation-2026-11-16-announced-2026-10-15",
+    "published_at": "2026-10-15T00:00:00Z",
+    "collected_at": "2026-10-16T11:10:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "issue",
+    "title": "GitHub 宣布 Copilot 中 Claude Opus 4.8/5 与 GPT-5.6 Terra 将于 11 月 16 日停用",
+    "facts": [
+      "GitHub 于 2026 年 10 月 15 日宣布 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra 将在 2026 年 11 月 16 日从所有 GitHub Copilot 体验中停用。",
+      "影响范围包括 Copilot Chat、inline edits、ask and agent modes 与 code completions。",
+      "建议替代模型为 Claude Opus 5.5，或以 GPT-6.1 Sol / GPT-6 Luna 替代 GPT-5.6 Terra。",
+      "Claude Opus 4.8 对年度个人订阅用户仍保留；Business/Enterprise 的替代模型仅在默认模型启用时通常自动启用，关闭 global default 或显式禁用模型的组织需更新 model policies。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
+      "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
+    ],
+    "analysis": "这是未来迁移截止日，不是已经发生的服务下线；替代模型可被策略打开不意味着固定模型的提示、工具、速率、成本或评测结果保持等价。",
+    "insight": "模型弃用治理需要同时维护声明替代方案、各策略域的实际可用性、固定 model ID、评测基线、预算和支持 runbook。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 78
+  },
+  {
+    "id": "google-model-garden-deepseek-v4-1-flash-public-preview-2026-10-14",
+    "published_at": "2026-10-14T00:00:00Z",
+    "collected_at": "2026-10-16T11:10:00+08:00",
+    "lane": "foundation_model",
+    "source_tier": "P0",
+    "entity": "DeepSeek-V4.1-Flash in Google Model Garden",
+    "signal_type": "release",
+    "title": "DeepSeek-V4.1-Flash 作为 fully managed model 在 Model Garden 进入 Public Preview",
+    "facts": [
+      "Gemini Enterprise Agent Platform Release Notes 于 2026 年 10 月 14 日记录，DeepSeek-V4.1-Flash 以 fully managed model（MaaS）在 Model Garden 中进入 Public Preview。",
+      "官方说明该模型接受文本和图像输入，面向 agentic 和 coding 任务，支持最高 1M token context window。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/deepseek-v4-1-flash"
+    ],
+    "analysis": "本期可确认的是 Google 托管入口的 Preview 状态，而非模型原厂 API、全球地区或所有套餐的普遍可用性；上下文规格也不能外推为长任务成功率。",
+    "insight": "第三方模型接入应分别验收模型能力、云托管形态、Preview/GA、地区、数据处理、配额价格和 Agent Runtime 行为。",
+    "recommended_action": "观察",
+    "confidence": "high",
+    "score": 73
+  }
+]
