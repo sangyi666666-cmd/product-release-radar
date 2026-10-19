@@ -1,0 +1,94 @@
+[
+  {
+    "id": "google-agent-search-stable-gemini-3-5-flash-2026-10-16",
+    "published_at": "2026-10-16T00:00:00Z",
+    "collected_at": "2026-10-19T11:35:00+08:00",
+    "lane": "data_agent",
+    "source_tier": "P0",
+    "entity": "Google Cloud Agent Search",
+    "signal_type": "feature",
+    "title": "Agent Search 将 stable 答案生成模型更新为 Gemini 3.5 Flash",
+    "facts": [
+      "Google Cloud Agent Search Release Notes 在 2026 年 10 月 16 日记录，答案生成的 stable 模型已由 gemini-2.5-flash/answer_gen/v1 更新为 gemini-3.5-flash/answer_gen/v1。",
+      "该页面将这一条目列为 Change；本期可确认的是 stable 别名指向改变，而非某个租户已经完成业务回归或获得不变的输出承诺。"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/generative-ai-app-builder/docs/release-notes"
+    ],
+    "analysis": "这是一项会影响未固定模型版本的检索/问答应用的运行时依赖变更；它不单独证明质量、时延、成本或安全性在任何组织数据上必然改善。",
+    "insight": "模型别名、实际解析的 model ID、索引/数据与权限快照、引用、用量和下游输出契约应一同进入任务级证据。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "openai-itau-ai-first-governance-case-2026-10-16",
+    "published_at": "2026-10-16T00:00:00Z",
+    "collected_at": "2026-10-19T11:35:00+08:00",
+    "lane": "enterprise_case",
+    "source_tier": "P0",
+    "entity": "Itaú",
+    "signal_type": "case",
+    "title": "Itaú 案例公开客户对话层 ia.i 与多模型治理平台 IARA 的规模和控制面",
+    "facts": [
+      "OpenAI 于 2026 年 10 月 16 日发布的客户案例称，Itaú 的 ia.i 覆盖账户、信贷、卡、保险等交互，支持文本或语音并在需要时连接人工支持；首阶段约 30 万客户。",
+      "案例称 IARA 按内部政策向团队受控提供不同模型，并包含可观测、每 token 成本控制和 Responsible AI 执行。",
+      "案例称其法律方案处理超过 9,000 万份文档、每月执行逾 200 万任务，并报告某些部门流程效率提升 20%–80%；数字为案例发布方及客户口径。",
+      "案例称 ia.i 全量客户覆盖为 2026 年底目标，不是当前完成状态。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/itau-generative-ai/"
+    ],
+    "analysis": "案例的价值在于将客户体验层与模型选择、成本、可观测和责任 AI 控制层分开；它不构成治理机制、覆盖率或效率区间可复制的独立审计证据。",
+    "insight": "企业 Agent 应分别保留业务入口、动作与人工转接、模型/数据/权限控制面，以及任务级效果和异常证据。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 80
+  },
+  {
+    "id": "openai-benefit-street-partners-codex-human-review-case-2026-10-16",
+    "published_at": "2026-10-16T00:00:00Z",
+    "collected_at": "2026-10-19T11:35:00+08:00",
+    "lane": "enterprise_case",
+    "source_tier": "P0",
+    "entity": "Benefit Street Partners",
+    "signal_type": "case",
+    "title": "Benefit Street Partners 案例称 Codex 支持公开数据比较与信用协议初审，但保留人工最终决策",
+    "facts": [
+      "OpenAI 于 2026 年 10 月 16 日发布的客户案例称，Benefit Street Partners 使用公开 SEC filings 构建 BDC 贷款估值比较工具，并使用 Codex 做代码审查；首版约一天完成，后续迭代总计约 10–12 小时。",
+      "案例称通常超过 300 页的信用协议可在约 20 分钟生成首轮分析，随后仍有一小时以上人工复核。",
+      "案例称该工具以 GPT-6 Astra 重构并已在公司托管门户上线，最终投资决策仍由人工完成。"
+    ],
+    "source_urls": [
+      "https://openai.com/index/benefit-street-partners/"
+    ],
+    "analysis": "这是一项专业增强和人工复核并存的案例，不是自动化投资或法律判断的证明；案例中的效率和时长不应外推为其他数据、规则或风控环境的 ROI。",
+    "insight": "专业型 Coding Agent 的验收需同时检查来源/权限、引用、初审与最终结论差异、漏检误报、复核工时、升级和变更证据。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 75
+  },
+  {
+    "id": "zoom-virtual-agent-upcoming-reporting-routing-release-2026-10-17",
+    "published_at": "2026-10-17T00:00:00Z",
+    "collected_at": "2026-10-19T11:35:00+08:00",
+    "lane": "ai_worker",
+    "source_tier": "P0",
+    "entity": "Zoom Virtual Agent",
+    "signal_type": "feature",
+    "title": "Zoom Virtual Agent 公布 10 月 17 日 Upcoming Release，含 usage export、trace export 与动态路由增强",
+    "facts": [
+      "Zoom 的 Release Notes 将 2026 年 10 月 17 日条目置于 Upcoming Release，而非 Released。",
+      "该计划条目列出 usage export、保存的报告视图/订阅、按 Agent 的 reporting settings、Query Insights trace export 与号码变量的动态呼叫路由等项目。",
+      "由于页面没有将这些项目标为已发布，本期仅记录为待核验的发布计划，不将其表述为当前普遍可用功能。"
+    ],
+    "source_urls": [
+      "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0067812"
+    ],
+    "analysis": "计划中的任务/trace 导出和按 Agent 归因，若实际落地，可改善虚拟员工的运营可观测性；但发布日期、套餐、地区、账户资格与实际行为均未由该 Upcoming 条目确认。",
+    "insight": "AI Worker 的发布状态应把 Upcoming、Preview、GA、租户启用和实际任务证据拆开记录，不能以路线图替代可用性。",
+    "recommended_action": "观察",
+    "confidence": "high",
+    "score": 62
+  }
+]
