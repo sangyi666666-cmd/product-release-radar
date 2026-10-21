@@ -231,6 +231,20 @@
       "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-12%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-12%26sort=updated%26order=desc%26per_page=30",
       "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-12%26sort=updated%26order=desc%26per_page=30"
+    ],
+    "2026-10-21": [
+      "https://cloud.google.com/blog/topics/ai-infrastructure/llm-d-1-0-an-open-source-stack-for-distributed-inference",
+      "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-government-services/",
+      "https://cloud.google.com/blog/products/ai-machine-learning/claude-opus-55-and-claude-sonnet-55-available-in-antigravity",
+      "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/",
+      "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+      "https://cloud.google.com/blog/topics/hybrid-cloud/managed-rag-search-inside-the-sovereign-perimeter-gemini-on-gdc-enterprise-search",
+      "https://openai.com/news/",
+      "https://www.anthropic.com/news",
+      "https://github.com/trending?since=daily",
+      "https://api.github.com/search/repositories?q=topic%3Allm%20pushed%3A%3E2026-10-14%26sort=updated%26order=desc%26per_page=100",
+      "https://api.github.com/search/repositories?q=topic%3Aai-agent%20pushed%3A%3E2026-10-14%26sort=updated%26order=desc%26per_page=100",
+      "https://api.github.com/search/repositories?q=topic%3Alarge-language-model%20pushed%3A%3E2026-10-14%26sort=updated%26order=desc%26per_page=100"
     ]
   }
 }

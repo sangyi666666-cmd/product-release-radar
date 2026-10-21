@@ -1,0 +1,143 @@
+[
+  {
+    "id": "google-llm-d-1-0-distributed-inference-agents-2026-10-20",
+    "published_at": "2026-10-20T00:00:00Z",
+    "collected_at": "2026-10-21T10:55:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "llm-d",
+    "signal_type": "release",
+    "title": "Google 发布 llm-d 1.0：面向多步 Agent 的开源 Kubernetes 分布式推理栈",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 20 日宣布发布开源、Kubernetes 原生的 llm-d 1.0；其为 CNCF Sandbox 项目，由 Google、Red Hat、IBM 等共同发起。",
+      "1.0 提供多租户优先级/公平流控、v1 API、路由高可用与零停机更新、session-aware routing、turn-priority scheduling 和原生 Responses API state。",
+      "官方还宣布 llm-d-async-processor，可从 Pub/Sub 或 Redis 等队列消费异步请求，并以容量、优先级与配额控制与实时流量共用资源。",
+      "公告中关于 TTFT、吞吐和缓存命中率的数字来自 Google 所列 workload 或生产/基准材料，不构成任意模型、集群或业务任务的 SLA。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/blog/topics/ai-infrastructure/llm-d-1-0-an-open-source-stack-for-distributed-inference"
+    ],
+    "analysis": "这是把 Agent 的上下文复用、交互/后台流量隔离和滚动升级下沉到推理控制面的 1.0 发布；它不替代 Agent 的工具权限、任务编排、业务验收或成本归因。",
+    "insight": "长任务平台的容量合同应同时记录会话路由、KV cache 层级、队列优先级、资源配额、版本迁移和实际任务延迟，而不能只监控单次模型调用。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 89
+  },
+  {
+    "id": "google-gemini-government-services-preview-2026-10-21",
+    "published_at": "2026-10-21T00:00:00Z",
+    "collected_at": "2026-10-21T10:55:00+08:00",
+    "lane": "ai_worker",
+    "source_tier": "P0",
+    "entity": "Gemini for government services",
+    "signal_type": "release",
+    "title": "Google 推出 Gemini for government services，当前为 Preview",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 21 日宣布 Gemini for government services，状态为 preview，而非 GA。",
+      "产品将可复用的政府工作 skills、安全连接器、合作伙伴 agents、统一治理控制面和开放伙伴生态列为五个组成部分。",
+      "官方称连接器查询现有系统而不迁移数据，并继承现有身份、角色和记录级权限；控制面包括 VPC Service Controls、CMEK、Assured Workloads 与带引用的输出。",
+      "官方示例中的信息公开请求发现、批量脱敏、供应商评标和费用审计均要求在关键步骤由人员审批；FedRAMP High Data Boundary 与美国数据驻留属于可部署能力描述，实际资格仍需按机构和配置核验。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-government-services/"
+    ],
+    "analysis": "其可迁移价值是把业务 skills、现有系统权限、引用、审批和控制面一起产品化；Preview 状态不证明所有连接器、伙伴 agent 或高合规部署已在每个租户可用。",
+    "insight": "岗位型 AI Worker 的验收不应只检查对话和 SOP，而应逐项核验数据是否原地查询、权限如何继承、哪些步骤强制审批、引用能否回溯及输出是否可审计。",
+    "recommended_action": "观察",
+    "confidence": "high",
+    "score": 85
+  },
+  {
+    "id": "google-antigravity-claude-5-5-partner-models-2026-10-20",
+    "published_at": "2026-10-20T00:00:00Z",
+    "collected_at": "2026-10-21T10:55:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "Google Antigravity",
+    "signal_type": "feature",
+    "title": "Claude Opus 5.5 与 Sonnet 5.5 在 Google Antigravity 面向 Google Cloud 客户可用",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 20 日宣布 Claude Opus 5.5 和 Claude Sonnet 5.5 可在 Google Antigravity 中使用。",
+      "管理员启用后，开发者可在 Antigravity 2.0、CLI 及 VS Code、JetBrains IntelliJ、Visual Studio 扩展的模型选择器使用；该公告不是 Claude 模型原厂的新发布。",
+      "Gemini for business 的第三方伙伴模型按 pay-as-you-go 计费，不消耗 Gemini Enterprise Standard/Plus 的 pooled monthly token quota；需配置 overage billing、spend limits 并授权伙伴模型。",
+      "Antigravity 的 subagent 配置可指定 inherit、flash 或 pro 模型层级；官方同时说明后台轻量 Gemini 协调会消耗 first-party tokens，可能产生费用。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/blog/products/ai-machine-learning/claude-opus-55-and-claude-sonnet-55-available-in-antigravity"
+    ],
+    "analysis": "这是一个企业 Coding Agent 入口的跨供应商模型与费用/治理边界扩展，不意味着所有用户默认可见，也不保证跨模型审查会自动提高每类代码任务的正确性。",
+    "insight": "多模型 harness 应将管理员启用、实际 model ID、子 agent 路由、背景协调调用、价格归属、工具权限和独立验证结果写入同一任务记录。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 84
+  },
+  {
+    "id": "github-copilot-model-policy-rest-api-ga-2026-10-19",
+    "published_at": "2026-10-19T00:00:00Z",
+    "collected_at": "2026-10-21T10:55:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "feature",
+    "title": "GitHub Copilot 模型策略 REST API 在企业、团队、应用和组织层 GA",
+    "facts": [
+      "GitHub 于 2026 年 10 月 19 日宣布 Copilot model policies 的 GET 与 PATCH REST endpoints 已 GA。",
+      "端点覆盖 enterprise、enterprise teams、agent apps 和 organizations 四个层级。",
+      "企业策略可在 organization mode 下将模型控制委派给组织，或在 enterprise teams mode 下委派给团队和应用。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/"
+    ],
+    "analysis": "这使模型允许列表能够进入基础设施即代码和变更审计流程，但 API 可写不等于策略已在客户端生效，也不替代租户内的可用性、账单和实际任务回归验证。",
+    "insight": "将 Agent 模型策略视为受控配置：按层级导出快照、代码评审、变更审批、定期 drift 检测，并以客户端/任务日志核对解析到的真实模型。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 82
+  },
+  {
+    "id": "github-copilot-models-retired-2026-10-19",
+    "published_at": "2026-10-19T00:00:00Z",
+    "collected_at": "2026-10-21T10:55:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "issue",
+    "title": "GitHub Copilot 已停用 Gemini 3.7 Flash、GPT-5.5/5.4/5.4 mini/5 mini 与 Grok 4.5",
+    "facts": [
+      "GitHub 于 2026 年 10 月 19 日确认，Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5 已在大多数 Copilot 体验中停用。",
+      "官方列出的影响体验包括 Copilot Chat、inline edits、ask and agent modes 及 code completions。",
+      "建议替代包括 Gemini 3.8 Flash、GPT-6.1 Sol、GPT-6 Luna 和 Grok 4.7；Enterprise 管理员可能需要在 model policies 中启用替代模型，且应在个人 Copilot 设置与模型选择器核验可见性。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
+    ],
+    "analysis": "这是已经生效的模型生命周期变更，不是未来下线预告；建议替代模型并非行为、费用、速率、工具表现或评测结果的等价承诺。",
+    "insight": "固定模型的 prompts、自动化、评测基线和成本预算应有停用清单；把可见性/策略检查、回归、回滚或降级方案作为变更前置条件。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 81
+  },
+  {
+    "id": "google-gdc-air-gapped-enterprise-search-preview-2026-10-20",
+    "published_at": "2026-10-20T00:00:00Z",
+    "collected_at": "2026-10-21T10:55:00+08:00",
+    "lane": "data_agent",
+    "source_tier": "P0",
+    "entity": "Gemini on Google Distributed Cloud",
+    "signal_type": "release",
+    "title": "Google 在 GDC air-gapped 推出 enterprise search Preview",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 20 日宣布，在 Google Distributed Cloud air-gapped 推出 enterprise search capabilities，状态为 preview。",
+      "官方将其描述为在物理安全边界内运行的全托管 RAG search，且不连接公共互联网或 Google Cloud 的全球基础设施。",
+      "公告面向需要数据主权、隔离网络或高监管边界的场景；它不代表每个数据源、模型、地区、硬件或合规认证默认可用。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/blog/topics/hybrid-cloud/managed-rag-search-inside-the-sovereign-perimeter-gemini-on-gdc-enterprise-search"
+    ],
+    "analysis": "这是将检索增强与推理部署边界一并产品化的 DataAgent 基础设施信号；Preview 不等于数据质量、权限同步、索引更新或离线运维已经得到端到端验证。",
+    "insight": "高敏数据 DataAgent 的架构评审应将网络隔离、模型/索引位置、连接器的身份与增量同步、引用、审计、补丁与故障恢复作为独立验收项。",
+    "recommended_action": "观察",
+    "confidence": "high",
+    "score": 78
+  }
+]
