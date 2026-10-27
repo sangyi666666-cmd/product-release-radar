@@ -1,0 +1,145 @@
+[
+  {
+    "id": "google-looker-lookml-knowledge-catalog-ga-2026-10-26",
+    "published_at": "2026-10-26T00:00:00Z",
+    "collected_at": "2026-10-27T10:41:00+08:00",
+    "lane": "data_agent",
+    "source_tier": "P0",
+    "entity": "Google Cloud Knowledge Catalog and Looker",
+    "signal_type": "release",
+    "title": "LookML 语义语言索引在 Knowledge Catalog GA",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 26 日宣布 Looker Core on Google Cloud 的 LookML semantic language indexing 在 Knowledge Catalog GA。",
+      "官方称已解析的 LookML models、Explores、Views、字段、连接关系、血缘和仪表板会被索引到 Knowledge Catalog。",
+      "Gemini Enterprise 和自建 Agent 可通过 Knowledge Catalog 或 LookupContext API 使用该上下文；在相关联邦查询中，Gemini Enterprise 以终端用户凭据访问其有 IAM 权限的数据资产。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/blog/products/business-intelligence/lookml-metadata-indexing-in-knowledge-catalog-is-now-ga/"
+    ],
+    "analysis": "这是将确定性业务语义与目录治理一起提供给 DataAgent 的 GA 能力，不代表 LookML 口径、数据质量、权限配置或生成结论自动正确。",
+    "insight": "DataAgent 需要把指标定义、粒度、join、过滤、血缘和权限作为可回放输入，而不是让模型在每轮对话中重猜 SQL 语义。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 88
+  },
+  {
+    "id": "github-copilot-gpt-6-1-terra-ga-2026-10-26",
+    "published_at": "2026-10-26T00:00:00Z",
+    "collected_at": "2026-10-27T10:41:00+08:00",
+    "lane": "agentic_coding",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "release",
+    "title": "GPT-6.1 Terra 在 GitHub Copilot GA 并逐步推出",
+    "facts": [
+      "GitHub 于 2026 年 10 月 26 日宣布 GPT-6.1 Terra 在 GitHub Copilot GA，定位为日常 agentic coding 和终端工作模型。",
+      "公告列出 VS Code、Visual Studio、Copilot CLI、cloud agent、Copilot app、github.com、移动端、JetBrains、Xcode 和 Eclipse 等入口，适用 Pro、Pro+、Max、Business、Enterprise。",
+      "GitHub 明确 rollout 将逐步进行；Business/Enterprise 管理员可通过 model policy 管理访问，新模型在默认模型启用未关闭且未被显式禁用时自动启用。",
+      "该模型按 provider list pricing 的 usage-based billing 计费。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot/"
+    ],
+    "analysis": "这是 Copilot 的模型入口与生命周期更新，而非新的 OpenAI API 普遍可用声明；GA、管理员允许、客户端可见和任务实际路由是不同状态。",
+    "insight": "模型变更应同时记录套餐/地区、policy、客户端可见性、实际 model ID、token/费用和黄金集结果。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 84
+  },
+  {
+    "id": "github-copilot-usage-metrics-totals-by-client-2026-10-23",
+    "published_at": "2026-10-23T00:00:00Z",
+    "collected_at": "2026-10-27T10:41:00+08:00",
+    "lane": "ai_infrastructure",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "feature",
+    "title": "Copilot usage metrics API 增加按客户端和模型选择方式的用量",
+    "facts": [
+      "GitHub 于 2026 年 10 月 23 日宣布 Copilot usage metrics API 新增 totals_by_client。",
+      "企业、组织及其用户的 1 日和 28 日报告可返回客户端的成功模型请求数、会话数、输入/输出 token、平均 token，以及按模型和选择模式细分的数据。",
+      "官方列举 opencode、claude_code、codex、zed、copilot_cli、github_app、cloud_agent、code_review、vscode 和 jetbrains 等客户端，并说明 client 是按 integration ID 的尽力分组。",
+      "request_count 统计模型调用而非 prompts，Copilot code review 模型会报告为 unknown。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode/"
+    ],
+    "analysis": "多入口 Coding Agent 的模型流量可以进入同一服务端观测面，但该指标不等于用户身份、任务成功、业务价值或精确成本归因。",
+    "insight": "应把客户端、任务、模型选择、token、工具权限、产物与人工验收关联，避免仅按 IDE 或请求数判断 Agent 运营状态。",
+    "recommended_action": "试用",
+    "confidence": "high",
+    "score": 83
+  },
+  {
+    "id": "github-copilot-customization-names-usage-metrics-2026-10-22",
+    "published_at": "2026-10-22T00:00:00Z",
+    "collected_at": "2026-10-27T10:41:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "feature",
+    "title": "Copilot usage metrics 记录自定义 Skill Agent MCP Server 的配置名称",
+    "facts": [
+      "GitHub 于 2026 年 10 月 22 日宣布 totals_by_skill、totals_by_custom_agent、totals_by_mcp、totals_by_slash_cmd、totals_by_plugin 会展示客户自定义项目的配置名称。",
+      "每个 totals_by 列表最多展示 25 条记录，高于此前的 5 条；剩余活动合并为 other。",
+      "覆盖 Copilot CLI、Copilot app、Copilot SDK 客户端和 ACP integrations；部分入口需要指定 CLI 或 SDK 最低版本，非 SDK IDE integrations 不报告名称。",
+      "官方提示此类指标基于客户端 telemetry，旧客户端或 telemetry 阻断可能导致低估，且历史日期不会回填名称。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api/"
+    ],
+    "analysis": "这是自建能力采用度的可见性提升，不代表 MCP/Skill 的安全、实际工具执行、业务效果或按名称精确计费。",
+    "insight": "自定义能力应有受控名称、owner、权限域、版本和退役日期，并将采用度与调用审计、失败/拒绝和人工接管结合。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 81
+  },
+  {
+    "id": "github-copilot-global-default-policy-ga-rollout-2026-10-22",
+    "published_at": "2026-10-22T00:00:00Z",
+    "collected_at": "2026-10-27T10:41:00+08:00",
+    "lane": "agent_platform",
+    "source_tier": "P0",
+    "entity": "GitHub Copilot",
+    "signal_type": "feature",
+    "title": "Copilot 全局默认策略开始对未配置的 GA 功能分批生效",
+    "facts": [
+      "GitHub 于 2026 年 10 月 22 日宣布 Copilot Business 和 Enterprise 的 global default policy 开始分批执行，发布说明称 rollout 持续至 10 月 26 日且各企业/组织生效时间可能不同。",
+      "对符合条件且仍为 Unconfigured 的 GA features/capabilities，系统会按 Enabled、Disabled 或 Let organizations decide 的全局默认策略一次性设置。",
+      "已显式设置的 feature policy 会保留；Preview features 保持 opt-in；后续修改全局默认不会改写已经设置的 feature policy。",
+      "公告列出的合格设置范围包括 Features and clients 与 MCP servers in Copilot。"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/"
+    ],
+    "analysis": "这是默认授权面策略化的变化，能减少漏配但不能替代功能风险评审；不同租户和既有显式设置可能产生不同实际状态。",
+    "insight": "默认策略应与例外、审批、快照、客户端验证和回滚一起管理，尤其是 MCP、云端 Agent 和自动代码操作。",
+    "recommended_action": "风险检查",
+    "confidence": "high",
+    "score": 80
+  },
+  {
+    "id": "google-project-fortify-agentic-vulnerability-remediation-case-2026-10-26",
+    "published_at": "2026-10-26T00:00:00Z",
+    "collected_at": "2026-10-27T10:41:00+08:00",
+    "lane": "enterprise_case",
+    "source_tier": "P0",
+    "entity": "Google Project Fortify",
+    "signal_type": "case",
+    "title": "Google 公开 Project Fortify 的 Agentic find fix deploy 内部实践",
+    "facts": [
+      "Google Cloud 于 2026 年 10 月 26 日公开其内部 Project Fortify，将漏洞发现、分诊、自动修复和部署串联为 find-fix-deploy 流程。",
+      "官方称 Gemini 驱动的扫描 harness 发现漏洞，triaging agent 结合实际运行环境区分可利用问题与噪声。",
+      "官方描述的 remediation 环节会在 sandbox 中分析根因、生成并验证修复，再将待审 changelist 交给开发者工作流；人类工程师 review/merge 后由 SRE 通过 canary 阶段部署。",
+      "Google 描述对大多数应用代码采用 precision-first 门槛，关键资产可选择更高 recall 并接受更多人工审查。"
+    ],
+    "source_urls": [
+      "https://cloud.google.com/transform/how-google-does-it-using-agents-help-find-track-and-fix-vulnerabilities"
+    ],
+    "analysis": "这是企业内部安全工程实践披露，而不是可采购产品、可外推性能或无人工补丁承诺；其可迁移价值在于保留分诊阈值、人审合并和 canary 发布。",
+    "insight": "高副作用 Agent 必须将发现、证据验证、沙箱验证、人工授权、渐进发布和回滚作为独立可观测阶段。",
+    "recommended_action": "深拆",
+    "confidence": "high",
+    "score": 77
+  }
+]
